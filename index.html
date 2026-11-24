@@ -1535,7 +1535,6 @@
 
     function mergeArchivePhotos(cloudList, localList) {
       const map = new Map();
-      // Đưa ảnh thực tế (không phải ảnh khung mẫu) từ local trước nếu cloud chưa có
       for (const lp of (localList || [])) {
         if (lp && lp.id && !lp.isSample) {
           map.set(lp.id, lp);
@@ -1543,7 +1542,6 @@
       }
       for (const cp of (cloudList || [])) {
         if (cp && cp.id) {
-          // Nếu bản ghi trên cloud vẫn là khung mẫu nhưng trên máy này đã có ảnh thực tế (không phải mẫu) thì giữ ảnh thực tế
           const existing = map.get(cp.id);
           if (cp.isSample && existing && !existing.isSample) {
             continue;
@@ -1552,7 +1550,6 @@
         }
       }
       const merged = Array.from(map.values());
-      // Nếu đã có ảnh thật thì loại bỏ khung mẫu mặc định để danh sách gọn gàng
       const hasRealPhoto = merged.some(p => !p.isSample);
       if (hasRealPhoto) {
         return merged.filter(p => !p.isSample);
@@ -1573,14 +1570,12 @@
         archivePhotos = merged;
         saveArchiveCache();
 
-        // Nếu trên máy có ảnh thật mới mà cloud chưa có (hoặc đang là khung mẫu), tự động đẩy lên cloud
         const cloudIds = new Set(cloudPhotos.map(x => x.id));
         const realLocalOnly = archivePhotos.filter(p => !p.isSample && (!cloudIds.has(p.id) || cloudPhotos.find(c => c.id === p.id)?.isSample));
         if (realLocalOnly.length > 0) {
           await supabaseClient.from('archive_photos').upsert(realLocalOnly.map(archivePhotoToRow));
         }
       } else if (Array.isArray(data) && data.length === 0) {
-        // Bảng archive_photos đang trống trên DB: đẩy dữ liệu hiện tại lên để khởi tạo
         const rows = archivePhotos.map(archivePhotoToRow);
         if (rows.length > 0) {
           await supabaseClient.from('archive_photos').upsert(rows);
@@ -1638,7 +1633,6 @@
         if (error) throw error;
 
         if (!data || data.length === 0) {
-          // Lần đầu kết nối bảng trống: đẩy dữ liệu gốc lên Supabase
           const rows = members.map(memberToRow);
           const { error: seedErr } = await supabaseClient.from('family_members').upsert(rows);
           if (seedErr) throw seedErr;
@@ -1928,7 +1922,6 @@
       svg.setAttribute('height', maxY);
       svg.setAttribute('viewBox', `0 0 ${maxX} ${maxY}`);
 
-      // Draw orthogonal connectors
       let pathsHtml = '';
       positions.forEach((pos, id) => {
         const isCollapsed = collapsedIds.has(id);
@@ -1957,7 +1950,6 @@
       });
       svg.innerHTML = pathsHtml;
 
-      // Draw cards
       const q = searchQuery.trim().toLowerCase();
       let cardsHtml = '';
 
@@ -2068,7 +2060,6 @@
       const isNarrow = window.innerWidth < 640 || document.body.classList.contains('force-mobile-mode');
 
       if (isNarrow) {
-        // Trên điện thoại: ưu tiên căn thẳng vào Thủy Tổ / gốc nhánh để thẻ chữ rõ, dễ kéo xem tiếp
         const firstRootId = focusedBranchRootId || 'g1_thuy_to';
         const rootPos = positions.get(firstRootId) || positions.values().next().value;
         scale = 0.72;
@@ -2148,7 +2139,6 @@
 
     function focusNodeById(id) {
       if (currentView !== 'tree') return;
-      // Ensure ancestors are expanded
       let curr = members.find(m => m.id === id);
       while (curr && curr.parentId) {
         collapsedIds.delete(curr.parentId);
@@ -2461,7 +2451,6 @@
           const genDelta = nextGen - oldGen;
           members[idx] = { ...members[idx], ...payload };
 
-          // Cập nhật chênh lệch Đời cho toàn bộ con cháu nếu đổi cha/đời
           const updatedDescendants = [];
           if (genDelta !== 0) {
             for (const desc of getDescendants(editId)) {
@@ -2803,7 +2792,6 @@
       }
     }
 
-    // Tự động nén ảnh hoặc đẩy lên Supabase Storage để đồng bộ nhanh và nhẹ trên mọi thiết bị
     function handleArchivePhotoUpload(event) {
       const file = event.target.files?.[0];
       if (!file) return;
@@ -3235,7 +3223,6 @@
       zoomBy(delta);
     }, { passive: false });
 
-    // Cảm ứng vuốt 1 ngón (di chuyển) và chụm/mở 2 ngón (thu phóng) trên điện thoại
     let touchState = { mode: null, startX: 0, startY: 0, startDist: 0, startScale: 1 };
 
     function getTouchDistance(t1, t2) {
@@ -3510,7 +3497,6 @@
         `;
       }
 
-      // Bảng thống kê từng đời
       const statsBody = document.getElementById('generationStatsBody');
       if (statsBody) {
         let rowsHtml = '';
@@ -3549,7 +3535,6 @@
         statsBody.innerHTML = rowsHtml;
       }
 
-      // Sổ ngày giỗ Âm lịch
       const monthFilter = document.getElementById('memorialMonthFilter')?.value || 'ALL';
       const mQuery = (document.getElementById('memorialSearchInput')?.value || '').trim().toLowerCase();
       const memorialContainer = document.getElementById('memorialListContainer');
@@ -3609,7 +3594,6 @@
         }
       }
 
-      // Danh sách rà soát thông tin còn khuyết
       const auditContainer = document.getElementById('auditListContainer');
       if (auditContainer) {
         const auditItems = members
@@ -4007,30 +3991,27 @@
         `;
       }
 
-      // mode === 'list'
       const sortedAll = [...members].sort((a, b) => a.generation - b.generation || a.name.localeCompare(b.name, 'vi'));
       return `
         <div style="border: 2px solid #c59b27; border-radius: 12px; padding: 18px; background: #fffdf9;">
-          ${buildPrintHeaderHtml(`Danh Sách Tổng Hợp Thành Viên (${sortedAll.length} người)`)}
-          <table style="width: 100%; border-collapse: collapse; font-size: 11px;">
+          ${buildPrintHeaderHtml(`Danh Sách Tổng Hợp Thành Viên Theo Đời (${sortedAll.length} người)`)}
+          <table style="width: 100%; border-collapse: collapse; font-size: 11.5px;">
             <thead>
               <tr style="background: #631212; color: #fff8e7;">
-                <th style="padding: 6px 7px; border: 1px solid #631212; text-align: left;">Đời</th>
-                <th style="padding: 6px 7px; border: 1px solid #631212; text-align: left;">Họ và tên</th>
-                <th style="padding: 6px 7px; border: 1px solid #631212; text-align: left;">Tên húy / Ghi chú</th>
-                <th style="padding: 6px 7px; border: 1px solid #631212; text-align: left;">Cha / Nhánh trên</th>
-                <th style="padding: 6px 7px; border: 1px solid #631212; text-align: left;">Ngày giỗ ÂL</th>
+                <th style="padding: 6px 8px; border: 1px solid #631212; text-align: left;">Đời</th>
+                <th style="padding: 6px 8px; border: 1px solid #631212; text-align: left;">Họ và tên</th>
+                <th style="padding: 6px 8px; border: 1px solid #631212; text-align: left;">Tên húy / Ghi chú</th>
+                <th style="padding: 6px 8px; border: 1px solid #631212; text-align: left;">Cha</th>
               </tr>
             </thead>
             <tbody>
               ${sortedAll.map(m => {
                 const p = m.parentId ? members.find(x => x.id === m.parentId) : null;
                 return `<tr class="print-avoid-break">
-                  <td style="padding: 5px 7px; border: 1px solid #e5d8c1; font-weight: 700; color: #631212;">Đời ${m.generation}</td>
-                  <td style="padding: 5px 7px; border: 1px solid #e5d8c1; font-weight: 600;">${escapeHtml(m.name)}</td>
-                  <td style="padding: 5px 7px; border: 1px solid #e5d8c1;">${escapeHtml(m.courtesyName || m.birthOrder || '—')}</td>
-                  <td style="padding: 5px 7px; border: 1px solid #e5d8c1;">${p ? escapeHtml(p.name) : 'Đức Thủy Tổ'}</td>
-                  <td style="padding: 5px 7px; border: 1px solid #e5d8c1;">${escapeHtml(m.lunarDeathDate || '—')}</td>
+                  <td style="padding: 5px 8px; border: 1px solid #e5d8c1; font-weight: 700; color: #631212;">Đời ${m.generation}</td>
+                  <td style="padding: 5px 8px; border: 1px solid #e5d8c1; font-weight: 600;">${escapeHtml(m.name)}</td>
+                  <td style="padding: 5px 8px; border: 1px solid #e5d8c1;">${escapeHtml(m.courtesyName || m.birthOrder || '—')}</td>
+                  <td style="padding: 5px 8px; border: 1px solid #e5d8c1;">${p ? escapeHtml(p.name) : 'Thủy Tổ'}</td>
                 </tr>`;
               }).join('')}
             </tbody>
@@ -4047,14 +4028,15 @@
       sheet.innerHTML = buildPrintableHtml(mode, branchRootId);
       setTimeout(() => {
         window.print();
-      }, 80);
+      }, 60);
     }
 
     function executePrintFromModal() {
-      const chosen = document.querySelector('input[name="printMode"]:checked')?.value || 'book';
+      const checked = document.querySelector('input[name="printMode"]:checked');
+      const mode = checked ? checked.value : 'book';
       const branchId = document.getElementById('printBranchSelect')?.value || '';
       closePrintModal();
-      printSection(chosen, branchId);
+      printSection(mode, branchId);
     }
 
     // =========================================================================
@@ -4064,30 +4046,17 @@
       members = loadLocalCache();
       archivePhotos = loadArchiveCache();
       renderAll();
-
-      // Tự nhận diện màn hình điện thoại khi mở lần đầu
-      if (window.innerWidth < 640) {
-        setDeviceMode('mobile');
-      } else {
-        setDeviceMode('desktop');
-      }
-
-      document.addEventListener('visibilitychange', () => {
-        if (document.visibilityState === 'visible' && supabaseClient) {
-          pullLatestFromCloud(true);
+      setTimeout(() => {
+        if (window.innerWidth < 640) {
+          setDeviceMode('mobile');
+        } else {
+          fitTreeToScreen();
         }
-      });
-
-      window.addEventListener('focus', () => {
-        if (supabaseClient) {
-          pullLatestFromCloud(false);
-        }
-      });
+      }, 80);
 
       const cfg = getCloudConfig();
       if (cfg && cfg.url && cfg.anonKey) {
         await initSupabase(cfg);
-        await pullLatestFromCloud(false);
       }
     })();
   </script>
