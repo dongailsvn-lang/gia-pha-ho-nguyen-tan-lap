@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sơ Đồ Ký Phả Họ Hà - Thôn Tân Lập (Demo)</title>
+  <title>Sơ Đồ Ký Phả Họ Lê - Thôn Tân Lập (Demo)</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -282,12 +282,12 @@
     <div class="px-3 sm:px-4 py-2 sm:py-2.5 flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-3">
         <div class="w-10 h-10 rounded-full bg-[#8b1e1e] border border-[#c59b27] flex items-center justify-center shadow-inner shrink-0">
-          <span class="font-serif-trad font-bold text-lg text-[#f4e7be]">Hà</span>
+          <span class="font-serif-trad font-bold text-lg text-[#f4e7be]">Lê</span>
         </div>
         <div>
           <div class="flex items-center gap-2 flex-wrap">
             <h1 class="font-serif-trad font-bold text-base sm:text-lg tracking-wide text-[#fff8e7]">
-              SƠ ĐỒ KÝ PHẢ HỌ HÀ - Thôn Tân Lập
+              SƠ ĐỒ KÝ PHẢ HỌ LÊ - Thôn Tân Lập
             </h1>
             <span class="text-[10.5px] font-bold px-2 py-0.5 rounded-full bg-[#c59b27]/20 text-[#f7e5a6] border border-[#c59b27]/60 tracking-wide">
               Phiên bản v2.0 • 2026
@@ -301,7 +301,7 @@
             </span>
           </div>
           <p class="text-[11px] text-[#f3dfc1]">
-            Thủy Tổ: Hà Quý Công (Đời 1) • Tiền Tổ: Hà Quý Ngọc (Đời 2) • Cập nhật tới Đời 8
+            Thủy Tổ: Lê Quý Công (Đời 1) • Tiền Tổ: Lê Quý Ngọc (Đời 2) • Cập nhật tới Đời 8
           </p>
         </div>
       </div>
@@ -388,7 +388,7 @@
             id="searchInput"
             type="text"
             oninput="handleSearch(this.value)"
-            placeholder="Tìm tên, tên húy, đời (VD: Hà Quý Ngọc, Đời 6)..."
+            placeholder="Tìm tên, tên húy, đời (VD: Lê Quý Ngọc, Đời 6)..."
             class="w-full pl-8 pr-7 py-1.5 rounded-lg bg-white border border-[#cbb796] focus:outline-none focus:border-[#8b1e1e] text-xs"
           />
           <span class="absolute left-2.5 top-1.5 text-[#8b1e1e]">🔍</span>
@@ -635,7 +635,7 @@
           <div class="space-y-1 max-w-2xl">
             <div class="flex items-center gap-2">
               <span class="px-2 py-0.5 rounded bg-[#c59b27] text-[#231914] font-bold text-[11px]">PHỤNG SỰ TỔ TIÊN &amp; RÀ SOÁT PHẢ HỆ</span>
-              <span class="text-xs text-[#f4e7be]">Họ Hà • Thôn Tân Lập</span>
+              <span class="text-xs text-[#f4e7be]">Họ Lê • Thôn Tân Lập</span>
             </div>
             <h2 class="font-serif-trad text-lg sm:text-xl font-bold tracking-wide">
               Sổ Ngày Giỗ Âm Lịch &amp; Thống Kê Các Đời
@@ -753,7 +753,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
             <label class="block font-semibold text-[#631212] mb-1">Họ và tên *</label>
-            <input id="mName" type="text" required placeholder="VD: Hà Văn Minh" class="w-full px-3 py-2 rounded-lg border border-[#cbb796] bg-white focus:outline-none focus:border-[#8b1e1e]" />
+            <input id="mName" type="text" required placeholder="VD: Lê Văn Minh" class="w-full px-3 py-2 rounded-lg border border-[#cbb796] bg-white focus:outline-none focus:border-[#8b1e1e]" />
           </div>
 
           <div>
@@ -867,7 +867,7 @@
         </div>
         <div>
           <label class="block font-semibold text-[#631212] mb-1">Danh sách tên con (mỗi người một dòng hoặc cách nhau bởi dấu phẩy)</label>
-          <textarea id="batchNames" rows="5" required placeholder="VD:&#10;Hà Văn A&#10;Hà Văn B&#10;Hà Thị C" class="w-full px-3 py-2 rounded-lg border border-[#cbb796] bg-white"></textarea>
+          <textarea id="batchNames" rows="5" required placeholder="VD:&#10;Lê Văn A&#10;Lê Văn B&#10;Lê Thị C" class="w-full px-3 py-2 rounded-lg border border-[#cbb796] bg-white"></textarea>
         </div>
         <div class="flex justify-end gap-2 pt-2 border-t border-[#e5d8c1]">
           <button type="button" onclick="closeBatchModal()" class="px-4 py-2 rounded-lg border border-[#cbb796] bg-white font-semibold">Hủy</button>
@@ -970,7 +970,7 @@
 
           <div>
             <label class="block font-semibold text-[#631212] mb-1">Địa điểm / Khu mộ</label>
-            <input id="pLocation" type="text" placeholder="VD: Khu lăng mộ họ Hà - Thôn Tân Lập" class="w-full px-3 py-2 rounded-lg border border-[#cbb796] bg-white focus:outline-none focus:border-[#8b1e1e]" />
+            <input id="pLocation" type="text" placeholder="VD: Khu lăng mộ họ Lê - Thôn Tân Lập" class="w-full px-3 py-2 rounded-lg border border-[#cbb796] bg-white focus:outline-none focus:border-[#8b1e1e]" />
           </div>
         </div>
 
@@ -997,7 +997,7 @@
 
         <div>
           <label class="block font-semibold text-[#631212] mb-1">Chú thích chi tiết (Vị trí đứng từ trái sang phải, bối cảnh...)</label>
-          <textarea id="pCaption" rows="3" placeholder="VD: Hàng trước từ trái qua: ông Hà Văn Hùng, ông Hà Văn Dũng... chụp trước khu lăng mộ Thủy Tổ Hà Quý Công nhân dịp tu sửa lăng mộ." class="w-full px-3 py-2 rounded-lg border border-[#cbb796] bg-white focus:outline-none focus:border-[#8b1e1e]"></textarea>
+          <textarea id="pCaption" rows="3" placeholder="VD: Hàng trước từ trái qua: ông Lê Văn Hùng, ông Lê Văn Dũng... chụp trước khu lăng mộ Thủy Tổ Lê Quý Công nhân dịp tu sửa lăng mộ." class="w-full px-3 py-2 rounded-lg border border-[#cbb796] bg-white focus:outline-none focus:border-[#8b1e1e]"></textarea>
         </div>
 
         <div class="pt-2 flex items-center justify-end gap-2 border-t border-[#e5d8c1]">
@@ -1015,11 +1015,11 @@
   <!-- THANH BẢN QUYỀN & PHÂN CÔNG BIÊN TẬP / KỸ THUẬT -->
   <footer class="bg-[#560e0e] text-[#f4e7be] border-t border-[#c59b27]/75 px-3 sm:px-5 py-1.5 z-30 shrink-0 text-[11px] flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
     <div class="flex items-center gap-2 flex-wrap">
-      <span class="px-1.5 py-0.5 rounded bg-[#c59b27] text-[#231914] font-bold text-[10px]">Bản quyền © Họ Hà - Tân Lập</span>
+      <span class="px-1.5 py-0.5 rounded bg-[#c59b27] text-[#231914] font-bold text-[10px]">Bản quyền © Họ Lê - Tân Lập</span>
       <span class="text-[#f7e5a6]/90">•</span>
-      <span><strong class="text-[#fff8e7] font-semibold">Biên tập nội dung:</strong> Ông Hà Đăng <span class="text-[#f4e7be] text-[10px]">(Đời 6, nhánh ông Hà Kiểm [Đ5] → Hà Miền [Đ4] → Hà Lành [Đ3])</span></span>
+      <span><strong class="text-[#fff8e7] font-semibold">Biên tập nội dung:</strong> Ông Lê Đăng <span class="text-[#f4e7be] text-[10px]">(Đời 6, nhánh ông Lê Kiểm [Đ5] → Lê Miền [Đ4] → Lê Lành [Đ3])</span></span>
       <span class="text-[#f7e5a6]/70">•</span>
-      <span><strong class="text-[#fff8e7] font-semibold">Kỹ thuật &amp; Thiết kế:</strong> Ông Hà Duy Đông <span class="text-[#f4e7be] text-[10px]">(Đời 7, nhánh Hà Đăng [Đ6] → ông Hà Kiểm [Đ5] → Hà Miền [Đ4] → Hà Lành [Đ3])</span></span>
+      <span><strong class="text-[#fff8e7] font-semibold">Kỹ thuật &amp; Thiết kế:</strong> Ông Lê Duy Đông <span class="text-[#f4e7be] text-[10px]">(Đời 7, nhánh Lê Đăng [Đ6] → ông Lê Kiểm [Đ5] → Lê Miền [Đ4] → Lê Lành [Đ3])</span></span>
       <span class="text-[#f7e5a6]/70">•</span>
       <span class="text-[#e5cfa0] italic">Hội đồng gia tộc &amp; Ban biên soạn</span>
     </div>
@@ -1073,7 +1073,7 @@
             <input type="radio" name="printMode" value="member" class="mt-0.5 accent-[#8b1e1e]" />
             <div>
               <div class="font-bold text-[#631212]">1. Hồ sơ chi tiết cá nhân &amp; nhánh liên quan</div>
-              <div class="text-[11px] text-[#6e5d52]">In trang tiểu sử, đường dẫn tổ tiên, thông tin giỗ/mộ phần và danh sách con cháu của người đang chọn (mặc định: <span id="printTargetMemberName" class="font-semibold text-[#231914]">Hà Quý Công</span>).</div>
+              <div class="text-[11px] text-[#6e5d52]">In trang tiểu sử, đường dẫn tổ tiên, thông tin giỗ/mộ phần và danh sách con cháu của người đang chọn (mặc định: <span id="printTargetMemberName" class="font-semibold text-[#231914]">Lê Quý Công</span>).</div>
             </div>
           </label>
 
@@ -1120,91 +1120,91 @@
 
   <script>
     // =========================================================================
-    // 1. DỮ LIỆU GỐC 8 ĐỜI: SƠ ĐỒ KÝ PHẢ HỌ HÀ - Thôn Tân Lập
+    // 1. DỮ LIỆU GỐC 8 ĐỜI: SƠ ĐỒ KÝ PHẢ HỌ LÊ - Thôn Tân Lập
     // =========================================================================
     const INITIAL_MEMBERS = [
       // ĐỜI 1: THỦY TỔ
-      { id: 'g1_thuy_to', parentId: null, name: 'Hà Quý Công', courtesyName: 'Thủy Tổ Họ Hà', gender: 'male', generation: 1, birthOrder: 'Đời 1 - Thủy Tổ', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: 'Thôn Tân Lập', bio: 'Đức Thủy Tổ họ Hà tại Thôn Tân Lập.', avatar: '' },
+      { id: 'g1_thuy_to', parentId: null, name: 'Lê Quý Công', courtesyName: 'Thủy Tổ Họ Lê', gender: 'male', generation: 1, birthOrder: 'Đời 1 - Thủy Tổ', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: 'Thôn Tân Lập', bio: 'Đức Thủy Tổ họ Lê tại Thôn Tân Lập.', avatar: '' },
 
       // ĐỜI 2: TIỀN TỔ
-      { id: 'g2_ha_quy_ngoc', parentId: 'g1_thuy_to', name: 'Hà Quý Ngọc', courtesyName: 'Tiền Tổ', gender: 'male', generation: 2, birthOrder: 'Đời 2 - Tiền Tổ', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: 'Thôn Tân Lập', bio: 'Tiền Tổ họ Hà, sinh ra các nhánh phát triển về sau.', avatar: '' },
+      { id: 'g2_ha_quy_ngoc', parentId: 'g1_thuy_to', name: 'Lê Quý Ngọc', courtesyName: 'Tiền Tổ', gender: 'male', generation: 2, birthOrder: 'Đời 2 - Tiền Tổ', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: 'Thôn Tân Lập', bio: 'Tiền Tổ họ Lê, sinh ra các nhánh phát triển về sau.', avatar: '' },
 
       // ĐỜI 3
-      { id: 'g3_ha_lanh', parentId: 'g2_ha_quy_ngoc', name: 'Hà Lạnh', courtesyName: '', gender: 'male', generation: 3, birthOrder: 'Nhánh trái', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Con Tiền Tổ Hà Quý Ngọc, thuộc nhánh bên trái.', avatar: '' },
-      { id: 'g3_ha_van_ra', parentId: 'g2_ha_quy_ngoc', name: 'Hà Văn Rạ', courtesyName: '', gender: 'male', generation: 3, birthOrder: 'Nhánh giữa', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Con Tiền Tổ Hà Quý Ngọc, thuộc nhánh giữa.', avatar: '' },
+      { id: 'g3_ha_lanh', parentId: 'g2_ha_quy_ngoc', name: 'Lê Lạnh', courtesyName: '', gender: 'male', generation: 3, birthOrder: 'Nhánh trái', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Con Tiền Tổ Lê Quý Ngọc, thuộc nhánh bên trái.', avatar: '' },
+      { id: 'g3_ha_van_ra', parentId: 'g2_ha_quy_ngoc', name: 'Lê Văn Rạ', courtesyName: '', gender: 'male', generation: 3, birthOrder: 'Nhánh giữa', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Con Tiền Tổ Lê Quý Ngọc, thuộc nhánh giữa.', avatar: '' },
       { id: 'g3_nhanh_phai', parentId: 'g2_ha_quy_ngoc', name: '(Khuyết tên)', courtesyName: 'Nhánh phải', gender: 'male', generation: 3, birthOrder: 'Nhánh phải', status: 'missing', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Ô nhánh bên phải trên sơ đồ gốc chưa ghi tên.', avatar: '' },
 
       // ĐỜI 4
-      { id: 'g4_ha_mien', parentId: 'g3_ha_lanh', name: 'Hà Miền', courtesyName: '', gender: 'male', generation: 4, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g4_ha_cau', parentId: 'g3_ha_lanh', name: 'Hà Cậu', courtesyName: '', gender: 'male', generation: 4, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g4_ha_rang', parentId: 'g3_ha_van_ra', name: 'Hà Rạng', courtesyName: '', gender: 'male', generation: 4, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g4_ha_ku', parentId: 'g3_ha_van_ra', name: 'Hà Ku', courtesyName: '', gender: 'male', generation: 4, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g4_ha_mien', parentId: 'g3_ha_lanh', name: 'Lê Miền', courtesyName: '', gender: 'male', generation: 4, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g4_ha_cau', parentId: 'g3_ha_lanh', name: 'Lê Cậu', courtesyName: '', gender: 'male', generation: 4, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g4_ha_rang', parentId: 'g3_ha_van_ra', name: 'Lê Rạng', courtesyName: '', gender: 'male', generation: 4, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g4_ha_ku', parentId: 'g3_ha_van_ra', name: 'Lê Ku', courtesyName: '', gender: 'male', generation: 4, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
       { id: 'g4_phai_1', parentId: 'g3_nhanh_phai', name: '(Khuyết tên)', courtesyName: '', gender: 'male', generation: 4, birthOrder: '', status: 'missing', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
 
       // ĐỜI 5
-      { id: 'g5_ha_mien_con', parentId: 'g4_ha_mien', name: 'Hà', courtesyName: '', gender: 'male', generation: 5, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Trên sơ đồ gốc ghi họ Hà, là cha của Hà Đều và Hà Đặng.', avatar: '' },
-      { id: 'g5_ha_cau_con', parentId: 'g4_ha_cau', name: 'Hà', courtesyName: '', gender: 'male', generation: 5, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Trên sơ đồ gốc ghi họ Hà, là cha của Hà Bính và Hà Tính.', avatar: '' },
-      { id: 'g5_ha_can', parentId: 'g4_ha_cau', name: 'Hà Căn', courtesyName: '', gender: 'male', generation: 5, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g5_ha_bang', parentId: 'g4_ha_rang', name: 'Hà Bang', courtesyName: '', gender: 'male', generation: 5, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g5_ha_mec', parentId: 'g4_ha_rang', name: 'Hà Méc', courtesyName: '', gender: 'male', generation: 5, birthOrder: '0 con', status: 'no_issue', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Ghi chú trên sơ đồ: 0 con.', avatar: '' },
-      { id: 'g5_ha_quynh', parentId: 'g4_ha_ku', name: 'Hà Quýnh', courtesyName: '', gender: 'male', generation: 5, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g5_ha_mien_ku', parentId: 'g4_ha_ku', name: 'Hà Miền', courtesyName: '', gender: 'male', generation: 5, birthOrder: '0 con', status: 'no_issue', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Ghi chú trên sơ đồ: 0 con.', avatar: '' },
-      { id: 'g5_ha_uen', parentId: 'g4_phai_1', name: 'Hà Uền', courtesyName: '', gender: 'male', generation: 5, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g5_ha_mien_con', parentId: 'g4_ha_mien', name: 'Lê', courtesyName: '', gender: 'male', generation: 5, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Trên sơ đồ gốc ghi họ Lê, là cha của Lê Đều và Lê Đặng.', avatar: '' },
+      { id: 'g5_ha_cau_con', parentId: 'g4_ha_cau', name: 'Lê', courtesyName: '', gender: 'male', generation: 5, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Trên sơ đồ gốc ghi họ Lê, là cha của Lê Bính và Lê Tính.', avatar: '' },
+      { id: 'g5_ha_can', parentId: 'g4_ha_cau', name: 'Lê Căn', courtesyName: '', gender: 'male', generation: 5, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g5_ha_bang', parentId: 'g4_ha_rang', name: 'Lê Bang', courtesyName: '', gender: 'male', generation: 5, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g5_ha_mec', parentId: 'g4_ha_rang', name: 'Lê Méc', courtesyName: '', gender: 'male', generation: 5, birthOrder: '0 con', status: 'no_issue', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Ghi chú trên sơ đồ: 0 con.', avatar: '' },
+      { id: 'g5_ha_quynh', parentId: 'g4_ha_ku', name: 'Lê Quýnh', courtesyName: '', gender: 'male', generation: 5, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g5_ha_mien_ku', parentId: 'g4_ha_ku', name: 'Lê Miền', courtesyName: '', gender: 'male', generation: 5, birthOrder: '0 con', status: 'no_issue', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Ghi chú trên sơ đồ: 0 con.', avatar: '' },
+      { id: 'g5_ha_uen', parentId: 'g4_phai_1', name: 'Lê Uền', courtesyName: '', gender: 'male', generation: 5, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
 
       // ĐỜI 6
-      { id: 'g6_ha_deu', parentId: 'g5_ha_mien_con', name: 'Hà Đều', courtesyName: '', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g6_ha_dang_1', parentId: 'g5_ha_mien_con', name: 'Hà Đặng', courtesyName: 'Biên tập nội dung', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Nhánh trái (Đời 3: Hà Lạnh → Đời 4: Hà Miền → Đời 5: ông Hà). Phụ trách biên tập nội dung phả hệ.', avatar: '' },
-      { id: 'g6_ha_binh', parentId: 'g5_ha_cau_con', name: 'Hà Bính', courtesyName: '', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g6_ha_tinh', parentId: 'g5_ha_cau_con', name: 'Hà Tính', courtesyName: '', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g6_ha_mau', parentId: 'g5_ha_can', name: 'Hà Mậu', courtesyName: '', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g6_ha_ret', parentId: 'g5_ha_can', name: 'Hà Rết', courtesyName: '', gender: 'male', generation: 6, birthOrder: '0 con', status: 'no_issue', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Ghi chú trên sơ đồ: 0 con.', avatar: '' },
-      { id: 'g6_ha_thet', parentId: 'g5_ha_bang', name: 'Hà Thết', courtesyName: '', gender: 'male', generation: 6, birthOrder: '0 con', status: 'no_issue', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Ghi chú trên sơ đồ: 0 con.', avatar: '' },
-      { id: 'g6_ha_len', parentId: 'g5_ha_bang', name: 'Hà Lên', courtesyName: '', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g6_ha_giang', parentId: 'g5_ha_quynh', name: 'Hà Giang', courtesyName: '', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g6_ha_xuan_mao', parentId: 'g5_ha_quynh', name: 'Hà Xuân Mão', courtesyName: '', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g6_ha_tien_si', parentId: 'g5_ha_quynh', name: 'Hà Tiến Sĩ', courtesyName: '', gender: 'male', generation: 6, birthOrder: '1945', status: 'deceased', birthYear: '1945', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Ghi chú trên sơ đồ: 1945.', avatar: '' },
-      { id: 'g6_ha_dang_2', parentId: 'g5_ha_uen', name: 'Hà Đặng', courtesyName: '', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g6_ha_deu', parentId: 'g5_ha_mien_con', name: 'Lê Đều', courtesyName: '', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g6_ha_dang_1', parentId: 'g5_ha_mien_con', name: 'Lê Đặng', courtesyName: 'Biên tập nội dung', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Nhánh trái (Đời 3: Lê Lạnh → Đời 4: Lê Miền → Đời 5: ông Lê). Phụ trách biên tập nội dung phả hệ.', avatar: '' },
+      { id: 'g6_ha_binh', parentId: 'g5_ha_cau_con', name: 'Lê Bính', courtesyName: '', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g6_ha_tinh', parentId: 'g5_ha_cau_con', name: 'Lê Tính', courtesyName: '', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g6_ha_mau', parentId: 'g5_ha_can', name: 'Lê Mậu', courtesyName: '', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g6_ha_ret', parentId: 'g5_ha_can', name: 'Lê Rết', courtesyName: '', gender: 'male', generation: 6, birthOrder: '0 con', status: 'no_issue', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Ghi chú trên sơ đồ: 0 con.', avatar: '' },
+      { id: 'g6_ha_thet', parentId: 'g5_ha_bang', name: 'Lê Thết', courtesyName: '', gender: 'male', generation: 6, birthOrder: '0 con', status: 'no_issue', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Ghi chú trên sơ đồ: 0 con.', avatar: '' },
+      { id: 'g6_ha_len', parentId: 'g5_ha_bang', name: 'Lê Lên', courtesyName: '', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g6_ha_giang', parentId: 'g5_ha_quynh', name: 'Lê Giang', courtesyName: '', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g6_ha_xuan_mao', parentId: 'g5_ha_quynh', name: 'Lê Xuân Mão', courtesyName: '', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g6_ha_tien_si', parentId: 'g5_ha_quynh', name: 'Lê Tiến Sĩ', courtesyName: '', gender: 'male', generation: 6, birthOrder: '1945', status: 'deceased', birthYear: '1945', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Ghi chú trên sơ đồ: 1945.', avatar: '' },
+      { id: 'g6_ha_dang_2', parentId: 'g5_ha_uen', name: 'Lê Đặng', courtesyName: '', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
       { id: 'g6_khuyet_phai', parentId: 'g5_ha_uen', name: '(Khuyết tên)', courtesyName: '', gender: 'male', generation: 6, birthOrder: '', status: 'missing', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
 
       // ĐỜI 7
-      { id: 'g7_ha_dac', parentId: 'g6_ha_deu', name: 'Hà Đạc', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g7_ha_van_hoi', parentId: 'g6_ha_deu', name: 'Hà Văn Hội', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g7_ha_yen', parentId: 'g6_ha_dang_1', name: 'Hà Yên', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g7_ha_van_nam_dang1', parentId: 'g6_ha_dang_1', name: 'Hà Văn Nam', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: 'Thôn Tân Lập', bio: 'Đời 7, nhánh Hà Đặng (Đời 6) → ông Hà (Đời 5) → Hà Miền (Đời 4) → Hà Lạnh (Đời 3).', avatar: '' },
-      { id: 'g7_ha_duy_dong', parentId: 'g6_ha_dang_1', name: 'Hà Duy Đông', courtesyName: 'Kỹ thuật & Thiết kế', gender: 'male', generation: 7, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: 'Thôn Tân Lập', bio: 'Đời 7, nhánh Hà Đặng (Đời 6) → ông Hà (Đời 5) → Hà Miền (Đời 4) → Hà Lạnh (Đời 3). Phụ trách kỹ thuật & thiết kế sơ đồ ký phả.', avatar: '' },
-      { id: 'g7_ha_minh_tuan_dang1', parentId: 'g6_ha_dang_1', name: 'Hà Minh Tuấn', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: 'Thôn Tân Lập', bio: 'Đời 7, nhánh Hà Đặng (Đời 6) → ông Hà (Đời 5) → Hà Miền (Đời 4) → Hà Lạnh (Đời 3).', avatar: '' },
-      { id: 'g7_ha_do', parentId: 'g6_ha_dang_1', name: 'Hà Đỗ', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: 'Thôn Tân Lập', bio: 'Đời 7, nhánh Hà Đặng (Đời 6) → ông Hà (Đời 5) → Hà Miền (Đời 4) → Hà Lạnh (Đời 3).', avatar: '' },
-      { id: 'g7_ha_van_hai', parentId: 'g6_ha_dang_1', name: 'Hà Văn Hải', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: 'Thôn Tân Lập', bio: 'Đời 7, nhánh Hà Đặng (Đời 6) → ông Hà (Đời 5) → Hà Miền (Đời 4) → Hà Lạnh (Đời 3).', avatar: '' },
-      { id: 'g7_ha_van_banh', parentId: 'g6_ha_binh', name: 'Hà Văn Bành', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g7_ha_tinh', parentId: 'g6_ha_binh', name: 'Hà Tĩnh', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g7_ha_minh_tuan', parentId: 'g6_ha_tinh', name: 'Hà Minh Tuân', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g7_ha_van_nam', parentId: 'g6_ha_mau', name: 'Hà Văn Nam', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g7_ha_duy_dang', parentId: 'g6_ha_mau', name: 'Hà Duy Đang', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g7_ha_van_sinh', parentId: 'g6_ha_mau', name: 'Hà Văn Sinh', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g7_ha_van_pho', parentId: 'g6_ha_len', name: 'Hà Văn Phó', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g7_ha_van_phuc', parentId: 'g6_ha_len', name: 'Hà Văn Phúc', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g7_ha_san', parentId: 'g6_ha_len', name: 'Hà San', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g7_ha_khanh', parentId: 'g6_ha_giang', name: 'Hà Khánh', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g7_ha_dai_hoang', parentId: 'g6_ha_giang', name: 'Hà Đại Hoạng', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g7_ha_van_vo', parentId: 'g6_ha_xuan_mao', name: 'Hà Văn Vò', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g7_ha_van_hung', parentId: 'g6_ha_tien_si', name: 'Hà Văn Hùng', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g7_ha_van_dung', parentId: 'g6_ha_tien_si', name: 'Hà Văn Dũng', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g7_ha_van_hiep', parentId: 'g6_ha_tien_si', name: 'Hà Văn Hiệp', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g7_ha_quang_hung', parentId: 'g6_ha_dang_2', name: 'Hà Quang Hưng', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g7_ha_te_duong', parentId: 'g6_khuyet_phai', name: 'Hà Tề Dương', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g7_ha_giang_nam', parentId: 'g6_khuyet_phai', name: 'Hà Giang Nam', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g7_ha_dac', parentId: 'g6_ha_deu', name: 'Lê Đạc', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g7_ha_van_hoi', parentId: 'g6_ha_deu', name: 'Lê Văn Hội', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g7_ha_yen', parentId: 'g6_ha_dang_1', name: 'Lê Yên', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g7_ha_van_nam_dang1', parentId: 'g6_ha_dang_1', name: 'Lê Văn Nam', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: 'Thôn Tân Lập', bio: 'Đời 7, nhánh Lê Đặng (Đời 6) → ông Lê (Đời 5) → Lê Miền (Đời 4) → Lê Lạnh (Đời 3).', avatar: '' },
+      { id: 'g7_ha_duy_dong', parentId: 'g6_ha_dang_1', name: 'Lê Duy Đông', courtesyName: 'Kỹ thuật & Thiết kế', gender: 'male', generation: 7, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: 'Thôn Tân Lập', bio: 'Đời 7, nhánh Lê Đặng (Đời 6) → ông Lê (Đời 5) → Lê Miền (Đời 4) → Lê Lạnh (Đời 3). Phụ trách kỹ thuật & thiết kế sơ đồ ký phả.', avatar: '' },
+      { id: 'g7_ha_minh_tuan_dang1', parentId: 'g6_ha_dang_1', name: 'Lê Minh Tuấn', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: 'Thôn Tân Lập', bio: 'Đời 7, nhánh Lê Đặng (Đời 6) → ông Lê (Đời 5) → Lê Miền (Đời 4) → Lê Lạnh (Đời 3).', avatar: '' },
+      { id: 'g7_ha_do', parentId: 'g6_ha_dang_1', name: 'Lê Đỗ', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: 'Thôn Tân Lập', bio: 'Đời 7, nhánh Lê Đặng (Đời 6) → ông Lê (Đời 5) → Lê Miền (Đời 4) → Lê Lạnh (Đời 3).', avatar: '' },
+      { id: 'g7_ha_van_hai', parentId: 'g6_ha_dang_1', name: 'Lê Văn Hải', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: 'Thôn Tân Lập', bio: 'Đời 7, nhánh Lê Đặng (Đời 6) → ông Lê (Đời 5) → Lê Miền (Đời 4) → Lê Lạnh (Đời 3).', avatar: '' },
+      { id: 'g7_ha_van_banh', parentId: 'g6_ha_binh', name: 'Lê Văn Bành', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g7_ha_tinh', parentId: 'g6_ha_binh', name: 'Lê Tĩnh', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g7_ha_minh_tuan', parentId: 'g6_ha_tinh', name: 'Lê Minh Tuân', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g7_ha_van_nam', parentId: 'g6_ha_mau', name: 'Lê Văn Nam', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g7_ha_duy_dang', parentId: 'g6_ha_mau', name: 'Lê Duy Đang', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g7_ha_van_sinh', parentId: 'g6_ha_mau', name: 'Lê Văn Sinh', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g7_ha_van_pho', parentId: 'g6_ha_len', name: 'Lê Văn Phó', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g7_ha_van_phuc', parentId: 'g6_ha_len', name: 'Lê Văn Phúc', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g7_ha_san', parentId: 'g6_ha_len', name: 'Lê San', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g7_ha_khanh', parentId: 'g6_ha_giang', name: 'Lê Khánh', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g7_ha_dai_hoang', parentId: 'g6_ha_giang', name: 'Lê Đại Hoạng', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g7_ha_van_vo', parentId: 'g6_ha_xuan_mao', name: 'Lê Văn Vò', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g7_ha_van_hung', parentId: 'g6_ha_tien_si', name: 'Lê Văn Hùng', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g7_ha_van_dung', parentId: 'g6_ha_tien_si', name: 'Lê Văn Dũng', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g7_ha_van_hiep', parentId: 'g6_ha_tien_si', name: 'Lê Văn Hiệp', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g7_ha_quang_hung', parentId: 'g6_ha_dang_2', name: 'Lê Quang Hưng', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g7_ha_te_duong', parentId: 'g6_khuyet_phai', name: 'Lê Tề Dương', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g7_ha_giang_nam', parentId: 'g6_khuyet_phai', name: 'Lê Giang Nam', courtesyName: '', gender: 'male', generation: 7, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
 
       // ĐỜI 8
-      { id: 'g8_ha_van_dac', parentId: 'g7_ha_dac', name: 'Hà Văn Đạc', courtesyName: '', gender: 'male', generation: 8, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g8_ha_van_minh', parentId: 'g7_ha_van_banh', name: 'Hà Văn Minh', courtesyName: '', gender: 'male', generation: 8, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g8_ha_ngoc_tu', parentId: 'g7_ha_tinh', name: 'Hà Ngọc Tú', courtesyName: '', gender: 'male', generation: 8, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g8_ha_minh_dac', parentId: 'g7_ha_minh_tuan', name: 'Hà Minh Đạc', courtesyName: '', gender: 'male', generation: 8, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g8_ha_tuan_anh', parentId: 'g7_ha_van_pho', name: 'Hà Tuần Anh', courtesyName: '', gender: 'male', generation: 8, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g8_ha_van_thinh', parentId: 'g7_ha_van_phuc', name: 'Hà Văn Thịnh', courtesyName: '', gender: 'male', generation: 8, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g8_ha_kien', parentId: 'g7_ha_san', name: 'Hà Kiên', courtesyName: '', gender: 'male', generation: 8, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g8_ha_van_duong', parentId: 'g7_ha_van_vo', name: 'Hà Văn Dương', courtesyName: '', gender: 'male', generation: 8, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g8_ha_tien_huy', parentId: 'g7_ha_van_hung', name: 'Hà Tiến Huy', courtesyName: '', gender: 'male', generation: 8, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g8_ha_quang_long', parentId: 'g7_ha_quang_hung', name: 'Hà Quang Long', courtesyName: '', gender: 'male', generation: 8, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' }
+      { id: 'g8_ha_van_dac', parentId: 'g7_ha_dac', name: 'Lê Văn Đạc', courtesyName: '', gender: 'male', generation: 8, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g8_ha_van_minh', parentId: 'g7_ha_van_banh', name: 'Lê Văn Minh', courtesyName: '', gender: 'male', generation: 8, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g8_ha_ngoc_tu', parentId: 'g7_ha_tinh', name: 'Lê Ngọc Tú', courtesyName: '', gender: 'male', generation: 8, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g8_ha_minh_dac', parentId: 'g7_ha_minh_tuan', name: 'Lê Minh Đạc', courtesyName: '', gender: 'male', generation: 8, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g8_ha_tuan_anh', parentId: 'g7_ha_van_pho', name: 'Lê Tuần Anh', courtesyName: '', gender: 'male', generation: 8, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g8_ha_van_thinh', parentId: 'g7_ha_van_phuc', name: 'Lê Văn Thịnh', courtesyName: '', gender: 'male', generation: 8, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g8_ha_kien', parentId: 'g7_ha_san', name: 'Lê Kiên', courtesyName: '', gender: 'male', generation: 8, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g8_ha_van_duong', parentId: 'g7_ha_van_vo', name: 'Lê Văn Dương', courtesyName: '', gender: 'male', generation: 8, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g8_ha_tien_huy', parentId: 'g7_ha_van_hung', name: 'Lê Tiến Huy', courtesyName: '', gender: 'male', generation: 8, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+      { id: 'g8_ha_quang_long', parentId: 'g7_ha_quang_hung', name: 'Lê Quang Long', courtesyName: '', gender: 'male', generation: 8, birthOrder: '', status: 'alive', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' }
     ];
 
     // =========================================================================
@@ -1234,7 +1234,7 @@
         <polygon points="165,155 400,85 635,155" fill="#631212" stroke="#c59b27" stroke-width="4"/>
         <rect x="330" y="190" width="140" height="145" rx="6" fill="#fdfbf7" stroke="#c59b27" stroke-width="3"/>
         <text x="400" y="232" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#631212" text-anchor="middle">LĂNG MỘ TỔ</text>
-        <text x="400" y="262" font-family="sans-serif" font-size="15" fill="#231914" text-anchor="middle">HỌ HÀ - Tân Lập</text>
+        <text x="400" y="262" font-family="sans-serif" font-size="15" fill="#231914" text-anchor="middle">HỌ LÊ - Tân Lập</text>
         <text x="400" y="302" font-family="sans-serif" font-size="13" fill="#6e5d52" text-anchor="middle">[Khung mẫu — Nhấn "Sửa" để tải ảnh thật]</text>
         <rect x="120" y="360" width="560" height="26" rx="4" fill="#7a6855"/>
       </svg>
@@ -1243,10 +1243,10 @@
     const INITIAL_ARCHIVE_PHOTOS = [
       {
         id: 'photo_sample_tomb_1',
-        title: 'Khu Lăng Mộ Thủy Tổ Hà Quý Công & Con Cháu Bái Yết',
+        title: 'Khu Lăng Mộ Thủy Tổ Lê Quý Công & Con Cháu Bái Yết',
         category: 'tomb',
         dateTaken: 'Dịp Tảo Mộ / Lễ Chạp',
-        location: 'Nghĩa trang Họ Hà - Thôn Tân Lập',
+        location: 'Nghĩa trang Họ Lê - Thôn Tân Lập',
         relatedAncestorId: 'g1_thuy_to',
         taggedMemberIds: ['g7_ha_van_hung', 'g7_ha_van_dung', 'g7_ha_van_hiep'],
         imageUrl: SAMPLE_TOMB_SVG,
@@ -2027,7 +2027,7 @@
             </div>
 
             <div class="flex items-center justify-between text-[10px] opacity-80 pt-1 border-t border-current/10">
-              <span class="truncate">${m.spouse ? 'Phối ngẫu: ' + escapeHtml(m.spouse) : (m.birthYear || m.deathYear ? `${m.birthYear || '?'} – ${m.deathYear || ''}` : 'Họ Hà - Tân Lập')}</span>
+              <span class="truncate">${m.spouse ? 'Phối ngẫu: ' + escapeHtml(m.spouse) : (m.birthYear || m.deathYear ? `${m.birthYear || '?'} – ${m.deathYear || ''}` : 'Họ Lê - Tân Lập')}</span>
               ${hasKids && genFilter === 'ALL'
                 ? `<button onclick="event.stopPropagation(); toggleCollapse('${m.id}')" class="ml-1 px-1.5 rounded bg-black/10 hover:bg-black/20 font-bold">${isCollapsed ? '+' + allKids.length : '−'}</button>`
                 : ''
@@ -2821,7 +2821,7 @@
         updatePhotoPreview(p.imageUrl || '');
       } else {
         document.getElementById('photoModalTitle').textContent = 'Thêm Hình Ảnh Tư Liệu / Lăng Mộ Tổ';
-        document.getElementById('pLocation').value = 'Nghĩa trang Họ Hà - Thôn Tân Lập';
+        document.getElementById('pLocation').value = 'Nghĩa trang Họ Lê - Thôn Tân Lập';
         modalTaggedIds = [];
         let defaultAnc = '';
         if (presetMemberId) {
@@ -3082,7 +3082,7 @@
     }
 
     async function resetToOriginalData() {
-      if (!confirm('Khôi phục toàn bộ sơ đồ về dữ liệu gốc 8 đời của Họ Hà - Thôn Tân Lập?')) return;
+      if (!confirm('Khôi phục toàn bộ sơ đồ về dữ liệu gốc 8 đời của Họ Lê - Thôn Tân Lập?')) return;
       pushUndoSnapshot();
       const oldIds = members.map(m => m.id);
       members = JSON.parse(JSON.stringify(INITIAL_MEMBERS));
@@ -3677,8 +3677,8 @@
       return `
         <div style="border-bottom: 2px solid #8b1e1e; padding-bottom: 10px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: flex-end; gap: 12px;">
           <div>
-            <div style="font-size: 11px; font-weight: 700; color: #8b1e1e; letter-spacing: 0.06em; text-transform: uppercase;">Dòng Họ Hà • Thôn Tân Lập</div>
-            <h1 style="font-family: 'Playfair Display', Georgia, serif; font-size: 20px; font-weight: 800; color: #631212; margin: 2px 0 0 0;">SƠ ĐỒ KÝ PHẢ HỌ HÀ - Thôn Tân Lập</h1>
+            <div style="font-size: 11px; font-weight: 700; color: #8b1e1e; letter-spacing: 0.06em; text-transform: uppercase;">Dòng Họ Lê • Thôn Tân Lập</div>
+            <h1 style="font-family: 'Playfair Display', Georgia, serif; font-size: 20px; font-weight: 800; color: #631212; margin: 2px 0 0 0;">SƠ ĐỒ KÝ PHẢ HỌ LÊ - Thôn Tân Lập</h1>
             <div style="font-size: 12px; color: #6e5d52; margin-top: 2px;">${escapeHtml(subTitle)}</div>
           </div>
           <div style="text-align: right; font-size: 11px; color: #6e5d52;">
@@ -3692,8 +3692,8 @@
     function buildPrintFooterHtml() {
       return `
         <div style="margin-top: 22px; padding-top: 10px; border-top: 1px solid #d8c7a8; display: flex; justify-content: space-between; font-size: 10.5px; color: #6e5d52;">
-          <span>Biên tập: Ông Hà Đăng (Đ6) • Kỹ thuật &amp; Thiết kế: Ông Hà Duy Đông (Đ7)</span>
-          <span>Hội đồng gia tộc Họ Hà – Thôn Tân Lập</span>
+          <span>Biên tập: Ông Lê Đăng (Đ6) • Kỹ thuật &amp; Thiết kế: Ông Lê Duy Đông (Đ7)</span>
+          <span>Hội đồng gia tộc Họ Lê – Thôn Tân Lập</span>
         </div>
       `;
     }
@@ -3764,14 +3764,14 @@
                 CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
               </div>
               <div style="font-size: 14pt; font-weight: bold; margin-top: 2pt;">
-                HỘI ĐỒNG GIA TỘC HỌ HÀ – Thôn Tân Lập
+                HỘI ĐỒNG GIA TỘC HỌ LÊ – Thôn Tân Lập
               </div>
               <div style="width: 120pt; height: 1.5pt; background: #000000; margin: 10pt auto;"></div>
             </div>
 
             <div style="margin: 14pt 0;">
               <div style="font-size: 24pt; font-weight: bold; letter-spacing: 1.5pt; text-transform: uppercase; margin-bottom: 6pt;">
-                GIA PHẢ HỌ HÀ
+                GIA PHẢ HỌ LÊ
               </div>
               <div style="font-size: 16pt; font-weight: bold; text-transform: uppercase; margin-bottom: 16pt;">
                 Thôn Tân Lập
@@ -3796,10 +3796,10 @@
             </div>
 
             <div style="font-size: 14pt; line-height: 1.55;">
-              <div><strong>Thủy Tổ:</strong> Cụ Hà Quý Công (Đời 1) &bull; <strong>Tiền Tổ:</strong> Cụ Hà Quý Ngọc (Đời 2)</div>
+              <div><strong>Thủy Tổ:</strong> Cụ Lê Quý Công (Đời 1) &bull; <strong>Tiền Tổ:</strong> Cụ Lê Quý Ngọc (Đời 2)</div>
               <div>Tổng hợp từ Đời 1 đến Đời ${maxGen} (Gồm ${members.length} thành viên)</div>
               <div style="margin-top: 8pt; font-size: 13pt;">
-                Biên tập nội dung: Ông Hà Đăng (Đời 6) &bull; Kỹ thuật &amp; Trình bày: Ông Hà Duy Đông (Đời 7)
+                Biên tập nội dung: Ông Lê Đăng (Đời 6) &bull; Kỹ thuật &amp; Trình bày: Ông Lê Duy Đông (Đời 7)
               </div>
               <div style="margin-top: 4pt; font-size: 13pt; font-style: italic;">
                 Lập sổ ngày ${todayStr}
@@ -3811,7 +3811,7 @@
           <div class="print-page-break">
             <div style="text-align: center; margin-bottom: 14pt;">
               <div style="font-size: 16pt; font-weight: bold; text-transform: uppercase;">
-                PHẦN I: PHẢ KÝ CHI TIẾT CÁC ĐỜI HỌ HÀ
+                PHẦN I: PHẢ KÝ CHI TIẾT CÁC ĐỜI HỌ LÊ
               </div>
               <div style="font-size: 14pt; font-style: italic;">
                 (Thôn Tân Lập — Ghi chép từ Đời 1 đến Đời ${maxGen})
