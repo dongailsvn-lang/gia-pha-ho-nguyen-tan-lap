@@ -29,25 +29,10 @@
     }
 
     @media (max-width: 639px) {
-      body {
-        overflow: auto;
-        height: auto;
-        min-height: 100dvh;
-      }
-      #appContainer {
-        height: auto;
-        min-height: 100dvh;
-        overflow: visible;
-      }
-      #appContainer > header {
-        max-height: 44dvh;
-        overflow-y: auto;
-      }
-      #appContainer > main {
-        min-height: 54dvh;
-        height: 54dvh;
-        flex: 1 0 auto;
-      }
+      body { overflow: auto; height: auto; min-height: 100dvh; }
+      #appContainer { height: auto; min-height: 100dvh; overflow: visible; }
+      #appContainer > header { max-height: 44dvh; overflow-y: auto; }
+      #appContainer > main { min-height: 54dvh; height: 54dvh; flex: 1 0 auto; }
     }
 
     body.force-mobile-mode {
@@ -66,18 +51,7 @@
       border-right: 3px solid #c69728;
       box-shadow: 0 0 44px rgba(0, 0, 0, 0.65);
     }
-    body.force-mobile-mode #appContainer > header {
-      max-height: 44dvh;
-      overflow-y: auto;
-    }
-    body.force-mobile-mode #appContainer > main {
-      min-height: 54dvh;
-      height: 54dvh;
-      flex: 1 0 auto;
-    }
-    body.force-mobile-mode .hide-on-mobile-mode {
-      display: none !important;
-    }
+    body.force-mobile-mode .hide-on-mobile-mode { display: none !important; }
     body.force-mobile-mode #detailDrawer {
       position: fixed;
       inset: 0;
@@ -87,32 +61,16 @@
       z-index: 45;
     }
 
-    #treeViewport {
-      touch-action: none;
-    }
+    #treeViewport { touch-action: none; }
 
     @media (max-width: 639px) {
-      #detailDrawer {
-        position: fixed;
-        inset: 0;
-        width: 100%;
-        z-index: 45;
-      }
-      .quick-actions {
-        opacity: 1 !important;
-        pointer-events: auto !important;
-      }
+      #detailDrawer { position: fixed; inset: 0; width: 100%; z-index: 45; }
+      .quick-actions { opacity: 1 !important; pointer-events: auto !important; }
     }
 
-    .font-serif-trad {
-      font-family: 'Playfair Display', 'Lora', Georgia, serif;
-    }
+    .font-serif-trad { font-family: 'Playfair Display', 'Lora', Georgia, serif; }
+    .font-calligraphy { font-family: 'Charm', 'Dancing Script', cursive; }
 
-    .font-ancestral {
-      font-family: 'Lora', 'Playfair Display', Georgia, serif;
-    }
-
-    /* Nền giấy dó cổ kính + hoa văn triện cổ */
     .canvas-bg {
       background-color: #f2e5cb;
       background-image:
@@ -133,14 +91,8 @@
       box-shadow: inset 0 0 0 1px rgba(198, 151, 40, 0.45), inset 0 0 0 4px rgba(122, 20, 20, 0.08);
     }
 
-    .node-card {
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-    }
-
-    .node-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 26px -8px rgba(79, 9, 9, 0.34);
-    }
+    .node-card { transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease; }
+    .node-card:hover { transform: translateY(-2px); box-shadow: 0 14px 26px -8px rgba(79, 9, 9, 0.34); }
 
     .card-founder {
       background: linear-gradient(145deg, #7f1414 0%, #520909 58%, #340404 100%);
@@ -163,23 +115,12 @@
       box-shadow: 0 5px 14px -4px rgba(122, 20, 20, 0.18), inset 0 0 0 1px rgba(198, 151, 40, 0.35);
     }
 
-    .node-card:hover .quick-actions {
-      opacity: 1;
-      pointer-events: auto;
-    }
+    .node-card:hover .quick-actions { opacity: 1; pointer-events: auto; }
+    .quick-actions { opacity: 0; pointer-events: none; transition: opacity 0.15s ease; }
 
-    .quick-actions {
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.15s ease;
-    }
-
-    .highlight-pulse {
-      animation: pulseGold 1.8s ease-in-out infinite;
-    }
-
+    .highlight-pulse { animation: pulseGold 1.8s ease-in-out infinite; }
     @keyframes pulseGold {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(198, 151, 40, 0.8); }
+      0%, 100% { box-shadow: 0 0 0 0 rgba(198, 151, 40, 0.85); }
       50% { box-shadow: 0 0 0 10px rgba(198, 151, 40, 0); }
     }
 
@@ -189,664 +130,385 @@
       box-shadow: 0 8px 24px -6px rgba(65, 6, 6, 0.5);
     }
 
-    .font-calligraphy {
-      font-family: 'Charm', 'Dancing Script', cursive;
-    }
-
     .poem-scroll-card {
       background: linear-gradient(180deg, rgba(255, 249, 234, 0.97) 0%, rgba(242, 224, 186, 0.97) 100%);
       border: 1.5px solid #c69728;
       box-shadow: 0 10px 28px -8px rgba(79, 9, 9, 0.38), inset 0 0 0 1px rgba(122, 20, 20, 0.18);
     }
 
-    #printSheetView {
-      display: none;
-    }
+    #printSheetView { display: none; }
 
     @media print {
-      @page {
-        size: A4 portrait;
-        margin: 20mm 20mm 20mm 30mm;
-      }
-      body {
-        overflow: visible !important;
-        height: auto !important;
-        background: #ffffff !important;
-        color: #241610 !important;
-        user-select: text !important;
-      }
-      body.force-mobile-mode #appContainer {
-        max-width: none !important;
-        border: none !important;
-        box-shadow: none !important;
-      }
-      #appContainer > header,
-      #appContainer > main,
-      #appContainer > footer,
-      #memberModal,
-      #batchModal,
-      #cloudModal,
-      #photoModal,
-      #lightboxModal,
-      #printOptionsModal {
-        display: none !important;
-      }
-      #printSheetView {
-        display: block !important;
-        position: static !important;
-        width: 100% !important;
-        background: #ffffff !important;
-        color: #000000 !important;
-        padding: 0 !important;
-      }
-      #printSheetView.book-print-mode {
-        font-family: "Times New Roman", Times, serif !important;
-        font-size: 14pt !important;
-        line-height: 1.5 !important;
-        color: #000000 !important;
-      }
-      #printSheetView.book-print-mode * {
-        font-family: "Times New Roman", Times, serif !important;
-      }
-      #printSheetView.book-print-mode .book-calligraphy {
-        font-family: 'Charm', 'Dancing Script', "Times New Roman", serif !important;
-      }
-      .print-page-break {
-        page-break-before: always;
-        break-before: page;
-      }
-      .print-avoid-break {
-        break-inside: avoid;
-        page-break-inside: avoid;
-      }
-    }
-
-    ::-webkit-scrollbar {
-      width: 7px;
-      height: 7px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #efe2c6;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #bfa36e;
-      border-radius: 9999px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #7a1414;
+      @page { size: A4 portrait; margin: 20mm 20mm 20mm 30mm; }
+      body { overflow: visible !important; height: auto !important; background: #ffffff !important; color: #241610 !important; }
+      #appContainer, #memberModal, #batchModal, #cloudModal, #photoModal, #lightboxModal, #printOptionsModal { display: none !important; }
+      #printSheetView { display: block !important; position: static !important; width: 100% !important; background: #ffffff !important; color: #000000 !important; }
     }
   </style>
 </head>
 <body class="h-screen w-screen overflow-hidden select-none">
   <div id="appContainer" class="h-full w-full flex flex-col bg-[#f7efe0] relative overflow-hidden ancient-frame">
 
-  <!-- TOP HEADER -->
-  <header class="ancient-header text-[#fff8e6] z-30 shrink-0">
-    <div class="px-3 sm:px-4 py-2 sm:py-2.5 flex flex-wrap items-center justify-between gap-2">
-      <div class="flex items-center gap-3">
-        <div class="w-11 h-11 rounded-full bg-[#3b0606] border-2 border-[#e0b646] flex items-center justify-center shadow-inner shrink-0">
-          <span class="font-serif-trad font-extrabold text-lg text-[#f7e5a6]">阮</span>
-        </div>
-        <div>
-          <div class="flex items-center gap-2 flex-wrap">
-            <h1 class="font-serif-trad font-extrabold text-base sm:text-lg tracking-wide text-[#fff8e6]">
-              SƠ ĐỒ KÝ PHẢ HỌ NGUYỄN - Thôn Tân Lập
-            </h1>
-            <span class="text-[10.5px] font-bold px-2 py-0.5 rounded-full bg-[#c69728]/25 text-[#f7e5a6] border border-[#e0b646]/70 tracking-wide">
-              Cổ Phả • 8 Đời (2026)
-            </span>
-            <span class="text-[10.5px] font-bold px-2 py-0.5 rounded-full bg-amber-300/20 text-amber-200 border border-amber-300/60 tracking-wide">
-              Thôn Tân Lập
-            </span>
-            <span id="cloudStatusBadge" onclick="openCloudModal()" title="Nhấn để cấu hình Supabase" class="cursor-pointer text-[11px] px-2 py-0.5 rounded-full bg-amber-950/85 text-amber-200 border border-amber-400/50 flex items-center gap-1.5">
-              <span id="cloudDot" class="w-2 h-2 rounded-full bg-amber-400"></span>
-              <span id="cloudStatusText">Chế độ cục bộ (Chưa cấu hình Supabase)</span>
-            </span>
+    <!-- TOP HEADER -->
+    <header class="ancient-header text-[#fff8e6] z-30 shrink-0">
+      <div class="px-3 sm:px-4 py-2 sm:py-2.5 flex flex-wrap items-center justify-between gap-2">
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-full bg-[#3b0606] border-2 border-[#e0b646] flex items-center justify-center shadow-inner shrink-0">
+            <span class="font-serif-trad font-extrabold text-lg text-[#f7e5a6]">阮</span>
           </div>
-          <p class="text-[11px] text-[#f4dfb6]">
-            Thủy Tổ: Nguyễn Quý Công (Đời 1) • Tiền Tổ: Nguyễn Quý Ngọc (Đời 2) • Đầy đủ Đời 1 – Đời 8
-          </p>
-        </div>
-      </div>
-
-      <!-- VIEW SWITCHER & MAIN ACTIONS -->
-      <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap">
-        <div class="bg-[#3b0606] p-0.5 rounded-lg border border-[#c69728]/50 flex text-xs" title="Chuyển chế độ hiển thị Máy tính hoặc Điện thoại">
-          <button id="btnDeviceDesktop" onclick="setDeviceMode('desktop')" class="px-2 py-1.5 rounded-md font-semibold bg-[#c69728] text-[#241610] transition flex items-center gap-1">
-            <span>💻</span><span class="hidden sm:inline">Máy tính</span>
-          </button>
-          <button id="btnDeviceMobile" onclick="setDeviceMode('mobile')" class="px-2 py-1.5 rounded-md font-medium text-[#f9ebd2] hover:text-white transition flex items-center gap-1">
-            <span>📱</span><span class="hidden sm:inline">Điện thoại</span>
-          </button>
-        </div>
-
-        <div class="bg-[#3b0606] p-0.5 rounded-lg border border-[#c69728]/50 flex text-xs">
-          <button id="btnViewTree" onclick="switchView('tree')" class="px-2.5 py-1.5 rounded-md font-semibold bg-[#c69728] text-[#241610] transition">
-            Sơ đồ cây
-          </button>
-          <button id="btnViewTable" onclick="switchView('table')" class="px-2.5 py-1.5 rounded-md font-medium text-[#f9ebd2] hover:text-white transition">
-            Danh sách bảng
-          </button>
-          <button id="btnViewArchive" onclick="switchView('archive')" class="px-2.5 py-1.5 rounded-md font-medium text-[#f9ebd2] hover:text-white transition flex items-center gap-1">
-            <span>🏛️</span><span>Tư liệu &amp; Lăng mộ</span>
-          </button>
-          <button id="btnViewMemorial" onclick="switchView('memorial')" class="px-2.5 py-1.5 rounded-md font-medium text-[#f9ebd2] hover:text-white transition flex items-center gap-1">
-            <span>🕯️</span><span>Sổ giỗ &amp; Thống kê</span>
-          </button>
-        </div>
-
-        <button onclick="openAddModal(null)" class="px-3 py-1.5 rounded-lg bg-[#c69728] hover:bg-[#d9ab38] text-[#241610] font-bold text-xs flex items-center gap-1 shadow transition">
-          <span>+ Thêm thành viên</span>
-        </button>
-
-        <button onclick="openBatchModal()" class="px-2.5 py-1.5 rounded-lg bg-[#861818] hover:bg-[#9e1f1f] text-[#fff8e6] border border-[#c69728]/60 font-medium text-xs transition">
-          Nhập hàng loạt
-        </button>
-
-        <button id="btnUndo" onclick="undoLastAction()" disabled class="px-2.5 py-1.5 rounded-lg bg-[#3b0606] disabled:opacity-40 hover:bg-[#6e1212] text-[#f5e6ba] border border-[#c69728]/45 text-xs font-medium transition">
-          Hoàn tác (<span id="undoCount">0</span>)
-        </button>
-
-        <button onclick="openCloudModal()" class="px-2.5 py-1.5 rounded-lg bg-[#3b0606] hover:bg-[#6e1212] text-[#f5e6ba] border border-[#c69728]/55 text-xs font-medium transition">
-          Cấu hình DB
-        </button>
-
-        <button onclick="openPrintModal()" title="In hoặc xuất PDF trang hồ sơ, danh sách hoặc sổ ngày giỗ" class="px-2.5 py-1.5 rounded-lg bg-[#861818] hover:bg-[#9e1f1f] text-[#fff8e6] border border-[#c69728]/75 font-semibold text-xs flex items-center gap-1 transition">
-          <span>🖨️</span><span class="hidden sm:inline">In / Xuất PDF</span>
-        </button>
-
-        <div class="relative group">
-          <button class="px-2.5 py-1.5 rounded-lg bg-[#3b0606] hover:bg-[#6e1212] text-[#f5e6ba] border border-[#c69728]/45 text-xs font-medium transition">
-            Dữ liệu ▾
-          </button>
-          <div class="hidden group-hover:block absolute right-0 mt-1 w-48 bg-[#f7efe0] text-[#241610] rounded-xl shadow-xl border border-[#c69728] py-1 z-50 text-xs">
-            <button onclick="syncNowToCloud()" class="w-full text-left px-3.5 py-2 hover:bg-[#ede0c5] font-medium text-[#7a1414]">
-              ↑ Đồng bộ lên Supabase ngay
-            </button>
-            <button onclick="exportCSV()" class="w-full text-left px-3.5 py-2 hover:bg-[#ede0c5] font-medium">
-              ↓ Xuất Excel / CSV (UTF-8)
-            </button>
-            <button onclick="exportJSON()" class="w-full text-left px-3.5 py-2 hover:bg-[#ede0c5] font-medium">
-              ↓ Sao lưu file JSON
-            </button>
-            <label class="w-full text-left px-3.5 py-2 hover:bg-[#ede0c5] font-medium cursor-pointer block">
-              ↑ Nhập file JSON
-              <input type="file" accept=".json" onchange="importJSON(event)" class="hidden" />
-            </label>
-            <hr class="my-1 border-[#d8c49e]" />
-            <button onclick="resetToOriginalData()" class="w-full text-left px-3.5 py-2 hover:bg-red-50 text-red-700 font-semibold">
-              ↺ Khôi phục dữ liệu gốc (8 đời)
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SUB-TOOLBAR: SEARCH, FILTER, ZOOM -->
-    <div id="treeToolbar" class="bg-[#efe2c6] text-[#241610] px-3 sm:px-4 py-1.5 sm:py-2 border-t border-[#c69728]/70 flex flex-wrap items-center justify-between gap-1.5 sm:gap-2 text-xs">
-      <div class="flex items-center gap-2 flex-wrap flex-1">
-        <div class="relative min-w-[210px] sm:min-w-[260px]">
-          <input
-            id="searchInput"
-            type="text"
-            oninput="handleSearch(this.value)"
-            placeholder="Tìm tên, tên húy, đời (VD: Nguyễn Quý Ngọc, Đời 8)..."
-            class="w-full pl-8 pr-7 py-1.5 rounded-lg bg-[#fffaf0] border border-[#bfa36e] focus:outline-none focus:border-[#7a1414] text-xs"
-          />
-          <span class="absolute left-2.5 top-1.5 text-[#7a1414]">🔍</span>
-          <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute right-2 top-1.5 text-stone-500 hover:text-stone-800">✕</button>
-        </div>
-
-        <select id="genFilter" onchange="applyGenFilter(this.value)" class="px-2.5 py-1.5 rounded-lg bg-[#fffaf0] border border-[#bfa36e] focus:outline-none focus:border-[#7a1414] text-xs font-medium">
-          <option value="ALL">Tất cả 8 đời (Đời 1 – Đời 8)</option>
-          <option value="1">Đời 1 (Thủy Tổ)</option>
-          <option value="2">Đời 2 (Tiền Tổ)</option>
-          <option value="3">Đời 3</option>
-          <option value="4">Đời 4</option>
-          <option value="5">Đời 5</option>
-          <option value="6">Đời 6</option>
-          <option value="7">Đời 7</option>
-          <option value="8">Đời 8</option>
-        </select>
-
-        <button onclick="expandAllNodes()" class="px-2.5 py-1.5 rounded-lg bg-[#fffaf0] hover:bg-[#e5d4b1] border border-[#bfa36e] font-medium transition">
-          Mở rộng tất cả
-        </button>
-        <button onclick="collapseToGen(4)" class="px-2.5 py-1.5 rounded-lg bg-[#fffaf0] hover:bg-[#e5d4b1] border border-[#bfa36e] font-medium transition">
-          Thu gọn tới Đời 4
-        </button>
-
-        <div class="flex items-center gap-1.5 bg-[#fffaf0] px-2 py-1 rounded-lg border border-[#c69728]">
-          <span class="text-[11px] font-bold text-[#520909]">🌿 Nhánh:</span>
-          <select id="branchFocusSelect" onchange="setFocusedBranch(this.value)" class="bg-transparent font-semibold text-[#241610] focus:outline-none text-xs max-w-[190px] sm:max-w-[230px]">
-            <option value="">Toàn bộ dòng họ (8 đời)</option>
-          </select>
-          <button id="btnClearBranchFocus" onclick="clearBranchFocus()" class="hidden px-1.5 py-0.5 rounded bg-[#7a1414] text-white text-[10px] font-bold hover:bg-[#4f0909]">
-            Bỏ lọc
-          </button>
-        </div>
-
-        <span id="statsBadge" class="ml-1 px-2.5 py-1 rounded-full bg-[#7a1414]/12 text-[#520909] font-semibold border border-[#c69728]/50">
-          0 thành viên
-        </span>
-      </div>
-
-      <div class="flex items-center gap-1.5">
-        <button onclick="zoomBy(-0.12)" class="w-7 h-7 rounded-lg bg-[#fffaf0] hover:bg-[#e5d4b1] border border-[#bfa36e] font-bold">−</button>
-        <span id="zoomLabel" class="w-12 text-center font-semibold text-[#520909]">100%</span>
-        <button onclick="zoomBy(0.12)" class="w-7 h-7 rounded-lg bg-[#fffaf0] hover:bg-[#e5d4b1] border border-[#bfa36e] font-bold">+</button>
-        <button onclick="fitTreeToScreen()" class="px-2.5 py-1 rounded-lg bg-[#fffaf0] hover:bg-[#e5d4b1] border border-[#bfa36e] font-medium">
-          Căn vừa màn hình
-        </button>
-      </div>
-
-      <!-- THANH ĐƯỜNG DẪN NHÁNH (BREADCRUMB) -->
-      <div id="branchBreadcrumbBar" class="w-full pt-1.5 mt-1.5 border-t border-[#d8c49e] flex items-center justify-between gap-2 flex-wrap text-[11px]">
-        <div id="breadcrumbTrail" class="flex items-center gap-1 flex-wrap text-[#241610]">
-          <span class="font-bold text-[#520909]">📍 Đường dẫn nhánh:</span>
-          <span class="text-[#695547] italic">Chọn một thành viên trên sơ đồ để xem chuỗi tổ tiên từ Thủy Tổ tới người đó.</span>
-        </div>
-        <div id="breadcrumbActions" class="flex items-center gap-1.5"></div>
-      </div>
-    </div>
-  </header>
-
-  <!-- MAIN WORKSPACE -->
-  <main class="flex-1 relative overflow-hidden flex">
-    <!-- TREE CANVAS VIEW -->
-    <div id="treeViewport" class="flex-1 canvas-bg relative overflow-hidden cursor-grab active:cursor-grabbing">
-      <div id="treeWorld" class="origin-top-left absolute top-0 left-0">
-        <svg id="treeSvg" class="absolute top-0 left-0 pointer-events-none" style="z-index: 1;"></svg>
-        <div id="treeNodesLayer" class="relative" style="z-index: 2;"></div>
-      </div>
-
-      <!-- NÚT TÔN KÍNH NHANH TỚI THỦY TỔ & TIỀN TỔ -->
-      <div class="absolute top-3 left-3 sm:left-4 z-20 flex items-center gap-1.5 flex-wrap">
-        <button onclick="focusNodeById('g1_thuy_to'); selectMember('g1_thuy_to');" class="px-2.5 py-1 rounded-full bg-[#520909]/95 hover:bg-[#7a1414] text-[#fff8e6] border border-[#e0b646] shadow text-[11px] font-semibold transition flex items-center gap-1">
-          <span>✦</span><span>Thủy Tổ (Đời 1)</span>
-        </button>
-        <button onclick="focusNodeById('g2_ha_quy_ngoc'); selectMember('g2_ha_quy_ngoc');" class="px-2.5 py-1 rounded-full bg-[#7a1414]/95 hover:bg-[#961a1a] text-[#f5e6ba] border border-[#c69728]/80 shadow text-[11px] font-semibold transition flex items-center gap-1">
-          <span>❖</span><span>Tiền Tổ (Đời 2)</span>
-        </button>
-      </div>
-
-      <button onclick="document.getElementById('treeViewport').scrollIntoView({ behavior: 'smooth', block: 'center' }); focusNodeById(focusedBranchRootId || selectedMemberId || 'g1_thuy_to');" class="sm:hidden absolute top-3 right-3 z-20 px-2.5 py-1 rounded-full bg-[#c69728] text-[#241610] shadow text-[11px] font-bold">
-        🎯 Căn giữa
-      </button>
-
-      <!-- BANNER CHẾ ĐỘ XEM TẬP TRUNG 1 NHÁNH -->
-      <div id="branchFocusBanner" class="hidden branch-focus-banner text-[#fff8e6] px-3.5 py-2 rounded-xl absolute top-12 left-3 sm:left-4 z-20 flex items-center gap-3 text-xs max-w-[92vw]">
-        <div class="min-w-0">
-          <div class="text-[10px] uppercase tracking-wider text-[#f7e5a6] font-bold">Chế độ tập trung 1 nhánh</div>
-          <div id="branchFocusLabel" class="font-bold truncate">Đang xem nhánh...</div>
-        </div>
-        <div class="flex items-center gap-1.5 shrink-0">
-          <button onclick="focusNodeById(focusedBranchRootId)" class="px-2 py-1 rounded bg-[#c69728] text-[#241610] font-bold text-[11px] hover:bg-[#d9ab38]">
-            Căn giữa nhánh
-          </button>
-          <button onclick="clearBranchFocus()" class="px-2 py-1 rounded bg-white/15 hover:bg-white/25 text-white font-semibold text-[11px]">
-            Xem toàn họ
-          </button>
-        </div>
-      </div>
-
-      <!-- KHUNG THƠ THƯ PHÁP GIA PHẢ TRÊN GIAO DIỆN -->
-      <div id="poemScrollPanel" class="poem-scroll-card rounded-2xl px-3.5 py-2.5 absolute bottom-3 md:bottom-16 left-3 sm:left-4 z-20 max-w-[330px] sm:max-w-[365px] transition-all">
-        <div id="poemHeaderBar" onclick="togglePoemPanel()" class="flex items-center justify-between gap-3 cursor-pointer">
-          <div class="flex items-center gap-1.5">
-            <span class="w-5 h-5 rounded-full bg-[#7a1414] text-[#f7e5a6] flex items-center justify-center text-[10px] font-serif-trad font-bold">詩</span>
-            <span class="font-calligraphy font-bold text-lg text-[#691010] leading-none">Ta cần nhớ</span>
-          </div>
-          <button type="button" id="btnTogglePoem" title="Mở / Thu gọn bài thơ" class="px-2 py-0.5 rounded bg-[#7a1414]/10 hover:bg-[#7a1414]/20 text-[#520909] text-[10px] font-bold">
-            Mở thơ
-          </button>
-        </div>
-        <div id="poemScrollBody" class="hidden pt-2 mt-2 border-t border-[#c69728]/70 font-calligraphy text-[17px] sm:text-[18.5px] leading-[1.52] text-[#241610] space-y-0.5 select-text">
-          <p>Cây có gốc mới nở cành xanh ngọn</p>
-          <p>Nước có nguồn, mới biển cả sông sâu</p>
-          <p>Người ta nguồn gốc từ đâu</p>
-          <p>Trước từ tiên tổ về sau có mình</p>
-          <p>Công tiên tổ tác thành từ trước</p>
-          <p>Con cháu sau mới được hiển vinh</p>
-          <p>Ta nên giỗ tết kính thành</p>
-          <p>Trông nom phần mộ tỏ tình nhớ ơn</p>
-        </div>
-      </div>
-
-      <!-- LEGEND -->
-      <div class="hidden md:flex items-center gap-4 bg-[#fffaf0]/95 backdrop-blur px-3.5 py-2 rounded-xl border border-[#c69728] shadow-sm text-[11px] absolute bottom-4 left-4 z-20">
-        <span class="font-semibold text-[#520909]">Chú giải:</span>
-        <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-[#7a1414] inline-block"></span> Thủy Tổ / Tiền Tổ</span>
-        <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-[#fffaf0] border-2 border-[#c69728] inline-block"></span> Nam / Chính chi</span>
-        <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-rose-50 border border-rose-300 inline-block"></span> Nữ</span>
-        <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-stone-100 border border-dashed border-stone-400 inline-block"></span> Vô tự (0 con) / Khuyết tên</span>
-        <span class="text-[#695547]">• Kéo nền để di chuyển • Cuộn chuột để thu phóng</span>
-      </div>
-    </div>
-
-    <!-- TABLE VIEW -->
-    <div id="tableViewport" class="hidden flex-1 overflow-auto bg-[#f7efe0] p-4 sm:p-6">
-      <div class="max-w-7xl mx-auto">
-        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
           <div>
-            <h2 class="font-serif-trad text-xl font-bold text-[#520909]">Danh Sách Thành Viên Theo Đời (Đời 1 – Đời 8)</h2>
-            <p class="text-xs text-[#695547]">Tra cứu nhanh, lọc theo đời và mở hồ sơ chi tiết hoặc chỉnh sửa từng thành viên.</p>
+            <div class="flex items-center gap-2 flex-wrap">
+              <h1 class="font-serif-trad font-extrabold text-base sm:text-lg tracking-wide text-[#fff8e6]">
+                SƠ ĐỒ KÝ PHẢ HỌ NGUYỄN - Thôn Tân Lập
+              </h1>
+              <span class="text-[10.5px] font-bold px-2 py-0.5 rounded-full bg-[#c69728]/25 text-[#f7e5a6] border border-[#e0b646]/70 tracking-wide">
+                Cổ Phả • 8 Đời (2026)
+              </span>
+              <span id="cloudStatusBadge" onclick="openCloudModal()" title="Nhấn để cấu hình / đồng bộ Supabase" class="cursor-pointer text-[11px] px-2 py-0.5 rounded-full bg-amber-950/85 text-amber-200 border border-amber-400/50 flex items-center gap-1.5">
+                <span id="cloudDot" class="w-2 h-2 rounded-full bg-amber-400"></span>
+                <span id="cloudStatusText">Chế độ cục bộ</span>
+              </span>
+            </div>
+            <p class="text-[11px] text-[#f4dfb6]">
+              Thủy Tổ: Nguyễn Quý Công (Đời 1) • Tiền Tổ: Nguyễn Quý Ngọc (Đời 2) • Đầy đủ Đời 1 – Đời 8
+            </p>
           </div>
-          <div class="flex items-center gap-2">
+        </div>
+
+        <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+          <div class="bg-[#3b0606] p-0.5 rounded-lg border border-[#c69728]/50 flex text-xs">
+            <button id="btnDeviceDesktop" onclick="setDeviceMode('desktop')" class="px-2 py-1.5 rounded-md font-semibold bg-[#c69728] text-[#241610] transition">💻 Máy tính</button>
+            <button id="btnDeviceMobile" onclick="setDeviceMode('mobile')" class="px-2 py-1.5 rounded-md font-medium text-[#f9ebd2] hover:text-white transition">📱 Điện thoại</button>
+          </div>
+
+          <div class="bg-[#3b0606] p-0.5 rounded-lg border border-[#c69728]/50 flex text-xs">
+            <button id="btnViewTree" onclick="switchView('tree')" class="px-2.5 py-1.5 rounded-md font-semibold bg-[#c69728] text-[#241610] transition">Sơ đồ cây</button>
+            <button id="btnViewTable" onclick="switchView('table')" class="px-2.5 py-1.5 rounded-md font-medium text-[#f9ebd2] hover:text-white transition">Danh sách bảng</button>
+            <button id="btnViewArchive" onclick="switchView('archive')" class="px-2.5 py-1.5 rounded-md font-medium text-[#f9ebd2] hover:text-white transition">🏛️ Tư liệu &amp; Lăng mộ</button>
+            <button id="btnViewMemorial" onclick="switchView('memorial')" class="px-2.5 py-1.5 rounded-md font-medium text-[#f9ebd2] hover:text-white transition">🕯️ Sổ giỗ &amp; Thống kê</button>
+          </div>
+
+          <button onclick="openAddModal(selectedMemberId || 'g1_thuy_to')" class="px-3 py-1.5 rounded-lg bg-[#c69728] hover:bg-[#d9ab38] text-[#241610] font-bold text-xs shadow transition">
+            + Thêm thành viên
+          </button>
+
+          <button onclick="openBatchModal()" class="px-2.5 py-1.5 rounded-lg bg-[#861818] hover:bg-[#9e1f1f] text-[#fff8e6] border border-[#c69728]/60 font-medium text-xs transition">
+            Nhập hàng loạt
+          </button>
+
+          <button onclick="syncNow()" class="px-2.5 py-1.5 rounded-lg bg-[#861818] hover:bg-[#9e1f1f] text-[#f7e5a6] border border-[#c69728]/60 font-semibold text-xs transition">
+            ☁️ Đồng bộ
+          </button>
+
+          <button id="btnUndo" onclick="undoLastAction()" disabled class="px-2.5 py-1.5 rounded-lg bg-[#3b0606] disabled:opacity-40 hover:bg-[#6e1212] text-[#f5e6ba] border border-[#c69728]/45 text-xs font-medium transition">
+            Hoàn tác (<span id="undoCount">0</span>)
+          </button>
+
+          <button onclick="openPrintModal()" class="px-2.5 py-1.5 rounded-lg bg-[#861818] hover:bg-[#9e1f1f] text-[#fff8e6] border border-[#c69728]/75 font-semibold text-xs transition">
+            🖨️ In / PDF
+          </button>
+
+          <button onclick="resetToOriginalData()" class="px-2.5 py-1.5 rounded-lg bg-[#3b0606] hover:bg-[#6e1212] text-[#f5e6ba] border border-[#c69728]/45 text-xs font-medium transition">
+            ↺ Khôi phục
+          </button>
+        </div>
+      </div>
+
+      <!-- SUB-TOOLBAR -->
+      <div id="treeToolbar" class="bg-[#efe2c6] text-[#241610] px-3 sm:px-4 py-1.5 sm:py-2 border-t border-[#c69728]/70 flex flex-wrap items-center justify-between gap-2 text-xs">
+        <div class="flex items-center gap-2 flex-wrap flex-1">
+          <div class="relative min-w-[210px] sm:min-w-[260px]">
             <input
+              id="searchInput"
               type="text"
               oninput="handleSearch(this.value)"
-              placeholder="Lọc nhanh trong bảng..."
-              class="px-3 py-1.5 rounded-lg border border-[#bfa36e] bg-[#fffaf0] text-xs w-56"
+              placeholder="Tìm tên, tên húy, đời (VD: Nguyễn Quý Ngọc, Đời 8)..."
+              class="w-full pl-8 pr-7 py-1.5 rounded-lg bg-[#fffaf0] border border-[#bfa36e] focus:outline-none focus:border-[#7a1414] text-xs"
             />
-            <button onclick="exportCSV()" class="px-3 py-1.5 rounded-lg bg-[#7a1414] text-white text-xs font-semibold hover:bg-[#4f0909]">
-              Tải file Excel (.csv)
-            </button>
+            <span class="absolute left-2.5 top-1.5 text-[#7a1414]">🔍</span>
+            <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute right-2 top-1.5 text-stone-500 hover:text-stone-800">✕</button>
           </div>
+
+          <select id="genFilter" onchange="applyGenFilter(this.value)" class="px-2.5 py-1.5 rounded-lg bg-[#fffaf0] border border-[#bfa36e] focus:outline-none focus:border-[#7a1414] text-xs font-medium">
+            <option value="ALL">Tất cả 8 đời (Đời 1 – Đời 8)</option>
+            <option value="1">Đời 1 (Thủy Tổ)</option>
+            <option value="2">Đời 2 (Tiền Tổ)</option>
+            <option value="3">Đời 3</option>
+            <option value="4">Đời 4</option>
+            <option value="5">Đời 5</option>
+            <option value="6">Đời 6</option>
+            <option value="7">Đời 7</option>
+            <option value="8">Đời 8</option>
+          </select>
+
+          <button onclick="expandAllNodes()" class="px-2.5 py-1.5 rounded-lg bg-[#fffaf0] hover:bg-[#e5d4b1] border border-[#bfa36e] font-medium transition">Mở rộng tất cả</button>
+          <button onclick="collapseToGen(4)" class="px-2.5 py-1.5 rounded-lg bg-[#fffaf0] hover:bg-[#e5d4b1] border border-[#bfa36e] font-medium transition">Thu gọn tới Đời 4</button>
+
+          <div class="flex items-center gap-1.5 bg-[#fffaf0] px-2 py-1 rounded-lg border border-[#c69728]">
+            <span class="text-[11px] font-bold text-[#520909]">🌿 Nhánh:</span>
+            <select id="branchFocusSelect" onchange="setFocusedBranch(this.value)" class="bg-transparent font-semibold text-[#241610] focus:outline-none text-xs max-w-[200px]">
+              <option value="">Toàn bộ dòng họ (8 đời)</option>
+            </select>
+            <button id="btnClearBranchFocus" onclick="clearBranchFocus()" class="hidden px-1.5 py-0.5 rounded bg-[#7a1414] text-white text-[10px] font-bold">Bỏ lọc</button>
+          </div>
+
+          <span id="statsBadge" class="ml-1 px-2.5 py-1 rounded-full bg-[#7a1414]/12 text-[#520909] font-semibold border border-[#c69728]/50">0 thành viên</span>
         </div>
 
-        <div id="mobileCardsList" class="space-y-2.5 sm:hidden"></div>
+        <div class="flex items-center gap-1.5">
+          <button onclick="zoomBy(-0.12)" class="w-7 h-7 rounded-lg bg-[#fffaf0] hover:bg-[#e5d4b1] border border-[#bfa36e] font-bold">−</button>
+          <span id="zoomLabel" class="w-12 text-center font-semibold text-[#520909]">100%</span>
+          <button onclick="zoomBy(0.12)" class="w-7 h-7 rounded-lg bg-[#fffaf0] hover:bg-[#e5d4b1] border border-[#bfa36e] font-bold">+</button>
+          <button onclick="fitTreeToScreen()" class="px-2.5 py-1 rounded-lg bg-[#fffaf0] hover:bg-[#e5d4b1] border border-[#bfa36e] font-medium">Căn vừa màn hình</button>
+        </div>
 
-        <div id="desktopTableWrap" class="hidden sm:block bg-[#fffaf0] rounded-xl border border-[#c69728]/80 shadow-sm overflow-x-auto">
-          <table class="w-full text-left border-collapse text-xs">
-            <thead>
-              <tr class="bg-[#520909] text-[#fff8e6]">
-                <th class="py-3 px-3 font-semibold">Đời</th>
-                <th class="py-3 px-3 font-semibold">Họ và tên</th>
-                <th class="py-3 px-3 font-semibold">Tên húy / Tự</th>
-                <th class="py-3 px-3 font-semibold">Thuộc nhánh / Cha</th>
-                <th class="py-3 px-3 font-semibold">Năm sinh – mất</th>
-                <th class="py-3 px-3 font-semibold">Trạng thái</th>
-                <th class="py-3 px-3 font-semibold text-right">Thao tác</th>
-              </tr>
-            </thead>
-            <tbody id="tableBody" class="divide-y divide-[#e4d4b5]"></tbody>
-          </table>
+        <div id="branchBreadcrumbBar" class="w-full pt-1.5 mt-1.5 border-t border-[#d8c49e] flex items-center justify-between gap-2 flex-wrap text-[11px]">
+          <div id="breadcrumbTrail" class="flex items-center gap-1 flex-wrap text-[#241610]">
+            <span class="font-bold text-[#520909]">📍 Đường dẫn nhánh:</span>
+            <span class="text-[#695547] italic">Bấm vào một thành viên bất kỳ để xem hồ sơ và chuỗi tổ tiên.</span>
+          </div>
+          <div id="breadcrumbActions" class="flex items-center gap-1.5"></div>
         </div>
       </div>
-    </div>
+    </header>
 
-    <!-- ARCHIVE & TOMB GALLERY VIEW -->
-    <div id="archiveViewport" class="hidden flex-1 overflow-auto bg-[#f7efe0] p-4 sm:p-6">
-      <div class="max-w-7xl mx-auto space-y-5">
-        <div class="bg-gradient-to-r from-[#520909] via-[#7a1414] to-[#520909] text-[#fff8e6] rounded-2xl p-4 sm:p-5 border-2 border-[#c69728] shadow-md flex flex-wrap items-center justify-between gap-4">
-          <div class="space-y-1 max-w-2xl">
-            <div class="flex items-center gap-2">
-              <span class="px-2 py-0.5 rounded bg-[#c69728] text-[#241610] font-bold text-[11px]">LƯU TRỮ TƯ LIỆU DÒNG HỌ</span>
-              <span class="text-xs text-[#f5e6ba]">Thôn Tân Lập</span>
+    <!-- MAIN WORKSPACE -->
+    <main class="flex-1 relative overflow-hidden flex">
+      <div id="treeViewport" class="flex-1 canvas-bg relative overflow-hidden cursor-grab active:cursor-grabbing">
+        <div id="treeWorld" class="origin-top-left absolute top-0 left-0">
+          <svg id="treeSvg" class="absolute top-0 left-0 pointer-events-none" style="z-index: 1;"></svg>
+          <div id="treeNodesLayer" class="relative" style="z-index: 2;"></div>
+        </div>
+
+        <div class="absolute top-3 left-3 sm:left-4 z-20 flex items-center gap-1.5 flex-wrap">
+          <button onclick="focusNodeById('g1_thuy_to'); selectMember('g1_thuy_to');" class="px-2.5 py-1 rounded-full bg-[#520909]/95 hover:bg-[#7a1414] text-[#fff8e6] border border-[#e0b646] shadow text-[11px] font-semibold transition">
+            ✦ Thủy Tổ (Đời 1)
+          </button>
+          <button onclick="focusNodeById('g2_ha_quy_ngoc'); selectMember('g2_ha_quy_ngoc');" class="px-2.5 py-1 rounded-full bg-[#7a1414]/95 hover:bg-[#961a1a] text-[#f5e6ba] border border-[#c69728]/80 shadow text-[11px] font-semibold transition">
+            ❖ Tiền Tổ (Đời 2)
+          </button>
+        </div>
+
+        <div id="branchFocusBanner" class="hidden branch-focus-banner text-[#fff8e6] px-3.5 py-2 rounded-xl absolute top-12 left-3 sm:left-4 z-20 flex items-center gap-3 text-xs max-w-[92vw]">
+          <div class="min-w-0">
+            <div class="text-[10px] uppercase tracking-wider text-[#f7e5a6] font-bold">Chế độ tập trung 1 nhánh</div>
+            <div id="branchFocusLabel" class="font-bold truncate">Đang xem nhánh...</div>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0">
+            <button onclick="focusNodeById(focusedBranchRootId)" class="px-2 py-1 rounded bg-[#c69728] text-[#241610] font-bold text-[11px]">Căn giữa nhánh</button>
+            <button onclick="clearBranchFocus()" class="px-2 py-1 rounded bg-white/15 hover:bg-white/25 text-white font-semibold text-[11px]">Xem toàn họ</button>
+          </div>
+        </div>
+
+        <div id="poemScrollPanel" class="poem-scroll-card rounded-2xl px-3.5 py-2.5 absolute bottom-14 left-3 sm:left-4 z-20 max-w-[350px]">
+          <div onclick="togglePoemPanel()" class="flex items-center justify-between gap-3 cursor-pointer">
+            <div class="flex items-center gap-1.5">
+              <span class="w-5 h-5 rounded-full bg-[#7a1414] text-[#f7e5a6] flex items-center justify-center text-[10px] font-serif-trad font-bold">詩</span>
+              <span class="font-calligraphy font-bold text-lg text-[#691010] leading-none">Ta cần nhớ</span>
             </div>
-            <h2 class="font-serif-trad text-lg sm:text-xl font-bold tracking-wide">
-              Tư Liệu Lăng Mộ Tổ &amp; Con Cháu Bái Yết
-            </h2>
-            <p class="text-xs text-[#f4dfb6] leading-relaxed">
-              Lưu giữ hình ảnh khu lăng mộ Thủy Tổ, Tiền Tổ, nhà thờ họ và các dịp con cháu tập trung tảo mộ, lễ chạp hằng năm.
-            </p>
+            <button type="button" id="btnTogglePoem" class="px-2 py-0.5 rounded bg-[#7a1414]/10 hover:bg-[#7a1414]/20 text-[#520909] text-[10px] font-bold">Mở thơ</button>
           </div>
-          <div class="flex items-center gap-2 shrink-0">
-            <button onclick="openPhotoModal(null)" class="px-4 py-2.5 rounded-xl bg-[#c69728] hover:bg-[#d9ab38] text-[#241610] font-bold text-xs shadow-md flex items-center gap-1.5 transition">
-              <span>+ Thêm hình ảnh tư liệu</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="bg-[#efe2c6] rounded-xl p-3 border border-[#c69728]/70 flex flex-wrap items-center justify-between gap-2.5 text-xs">
-          <div class="flex items-center gap-1.5 flex-wrap">
-            <button onclick="setArchiveCategory('ALL')" data-acat="ALL" class="archive-cat-btn px-3 py-1.5 rounded-lg font-semibold bg-[#7a1414] text-white transition">
-              Tất cả (<span id="countCatAll">0</span>)
-            </button>
-            <button onclick="setArchiveCategory('tomb')" data-acat="tomb" class="archive-cat-btn px-3 py-1.5 rounded-lg font-medium bg-[#fffaf0] hover:bg-[#e5d4b1] border border-[#bfa36e] transition">
-              🪦 Lăng mộ Tổ
-            </button>
-            <button onclick="setArchiveCategory('descendants')" data-acat="descendants" class="archive-cat-btn px-3 py-1.5 rounded-lg font-medium bg-[#fffaf0] hover:bg-[#e5d4b1] border border-[#bfa36e] transition">
-              👨‍👩‍👧‍👦 Con cháu bái yết
-            </button>
-            <button onclick="setArchiveCategory('shrine')" data-acat="shrine" class="archive-cat-btn px-3 py-1.5 rounded-lg font-medium bg-[#fffaf0] hover:bg-[#e5d4b1] border border-[#bfa36e] transition">
-              🏯 Nhà thờ họ / Lễ chạp
-            </button>
-            <button onclick="setArchiveCategory('document')" data-acat="document" class="archive-cat-btn px-3 py-1.5 rounded-lg font-medium bg-[#fffaf0] hover:bg-[#e5d4b1] border border-[#bfa36e] transition">
-              📜 Bia ký / Sắc phong
-            </button>
-          </div>
-
-          <div class="flex items-center gap-2 flex-wrap">
-            <input
-              id="archiveSearchInput"
-              type="text"
-              oninput="renderArchiveGallery()"
-              placeholder="Tìm tiêu đề ảnh, địa điểm, người trong ảnh..."
-              class="px-3 py-1.5 rounded-lg border border-[#bfa36e] bg-[#fffaf0] text-xs w-60 focus:outline-none focus:border-[#7a1414]"
-            />
+          <div id="poemScrollBody" class="hidden pt-2 mt-2 border-t border-[#c69728]/70 font-calligraphy text-[17px] leading-[1.52] text-[#241610] space-y-0.5 select-text">
+            <p>Cây có gốc mới nở cành xanh ngọn</p>
+            <p>Nước có nguồn, mới biển cả sông sâu</p>
+            <p>Người ta nguồn gốc từ đâu</p>
+            <p>Trước từ tiên tổ về sau có mình</p>
+            <p>Công tiên tổ tác thành từ trước</p>
+            <p>Con cháu sau mới được hiển vinh</p>
+            <p>Ta nên giỗ tết kính thành</p>
+            <p>Trông nom phần mộ tỏ tình nhớ ơn</p>
           </div>
         </div>
 
-        <div id="archiveGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-8"></div>
+        <div class="hidden md:flex items-center gap-4 bg-[#fffaf0]/95 backdrop-blur px-3.5 py-2 rounded-xl border border-[#c69728] shadow-sm text-[11px] absolute bottom-3 left-3 sm:left-4 z-20">
+          <span class="font-semibold text-[#520909]">Chú giải:</span>
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-[#7a1414] inline-block"></span> Thủy Tổ / Tiền Tổ</span>
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-[#fffaf0] border-2 border-[#c69728] inline-block"></span> Nam / Chính chi</span>
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-rose-50 border border-rose-300 inline-block"></span> Nữ</span>
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-stone-100 border border-dashed border-stone-400 inline-block"></span> Vô tự / Khuyết tên</span>
+          <span class="text-[#695547]">• Bấm vào thẻ để xem hồ sơ • Kéo nền để di chuyển</span>
+        </div>
       </div>
-    </div>
 
-    <!-- MEMORIAL BOOK & GENERATION STATISTICS VIEW -->
-    <div id="memorialViewport" class="hidden flex-1 overflow-auto bg-[#f7efe0] p-4 sm:p-6">
-      <div class="max-w-7xl mx-auto space-y-6 pb-8">
-        <div class="bg-gradient-to-r from-[#520909] via-[#7a1414] to-[#520909] text-[#fff8e6] rounded-2xl p-4 sm:p-5 border-2 border-[#c69728] shadow-md flex flex-wrap items-center justify-between gap-4">
-          <div class="space-y-1 max-w-2xl">
-            <div class="flex items-center gap-2">
-              <span class="px-2 py-0.5 rounded bg-[#c69728] text-[#241610] font-bold text-[11px]">PHỤNG SỰ TỔ TIÊN &amp; RÀ SOÁT PHẢ HỆ</span>
-              <span class="text-xs text-[#f5e6ba]">Họ Nguyễn • Thôn Tân Lập</span>
+      <!-- TABLE VIEW -->
+      <div id="tableViewport" class="hidden flex-1 overflow-auto bg-[#f7efe0] p-4 sm:p-6">
+        <div class="max-w-7xl mx-auto">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div>
+              <h2 class="font-serif-trad text-xl font-bold text-[#520909]">Danh Sách Thành Viên Theo Đời (Đời 1 – Đời 8)</h2>
+              <p class="text-xs text-[#695547]">Bấm vào từng hàng để xem hồ sơ chi tiết hoặc chỉnh sửa.</p>
             </div>
-            <h2 class="font-serif-trad text-lg sm:text-xl font-bold tracking-wide">
-              Sổ Ngày Giỗ Âm Lịch &amp; Thống Kê Các Đời
-            </h2>
-            <p class="text-xs text-[#f4dfb6] leading-relaxed">
-              Tra cứu ngày giỗ theo từng tháng Âm lịch phục vụ lễ cúng/giỗ Tổ, đồng thời thống kê nhân khẩu từng đời và rà soát các hồ sơ còn khuyết thông tin.
-            </p>
+            <button onclick="exportCSV()" class="px-3 py-1.5 rounded-lg bg-[#7a1414] text-white text-xs font-semibold hover:bg-[#4f0909]">Tải file Excel (.csv)</button>
           </div>
-          <div class="flex items-center gap-2 shrink-0 flex-wrap">
-            <button onclick="printSection('memorial')" class="px-3.5 py-2 rounded-xl bg-[#c69728] hover:bg-[#d9ab38] text-[#241610] font-bold text-xs shadow flex items-center gap-1.5 transition">
-              <span>🖨️</span><span>In Sổ Giỗ &amp; Thống Kê</span>
-            </button>
+          <div class="bg-[#fffaf0] rounded-xl border border-[#c69728]/80 shadow-sm overflow-x-auto">
+            <table class="w-full text-left border-collapse text-xs">
+              <thead>
+                <tr class="bg-[#520909] text-[#fff8e6]">
+                  <th class="py-3 px-3 font-semibold">Đời</th>
+                  <th class="py-3 px-3 font-semibold">Họ và tên</th>
+                  <th class="py-3 px-3 font-semibold">Tên húy / Ghi chú</th>
+                  <th class="py-3 px-3 font-semibold">Cha / Nhánh trên</th>
+                  <th class="py-3 px-3 font-semibold">Ngày giỗ ÂL</th>
+                  <th class="py-3 px-3 font-semibold text-right">Thao tác</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody" class="divide-y divide-[#e4d4b5]"></tbody>
+            </table>
           </div>
         </div>
+      </div>
 
-        <section class="space-y-3">
-          <div class="flex items-center justify-between flex-wrap gap-2">
-            <h3 class="font-serif-trad text-base sm:text-lg font-bold text-[#520909]">📊 Thống Kê Nhân Đinh Theo Đời &amp; Mức Độ Hoàn Thiện Hồ Sơ</h3>
-            <span id="completenessSummaryBadge" class="text-xs font-semibold px-3 py-1 rounded-full bg-[#efe2c6] border border-[#c69728]/70 text-[#520909]"></span>
+      <!-- ARCHIVE VIEW -->
+      <div id="archiveViewport" class="hidden flex-1 overflow-auto bg-[#f7efe0] p-4 sm:p-6">
+        <div class="max-w-7xl mx-auto space-y-4">
+          <div class="bg-[#520909] text-[#fff8e6] rounded-2xl p-4 border-2 border-[#c69728] flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <h2 class="font-serif-trad text-lg font-bold">Tư Liệu Lăng Mộ Tổ &amp; Con Cháu Bái Yết</h2>
+              <p class="text-xs text-[#f4dfb6]">Lưu giữ hình ảnh lăng mộ, nhà thờ họ và các dịp lễ giỗ, tảo mộ.</p>
+            </div>
+            <button onclick="openPhotoModal()" class="px-4 py-2 rounded-xl bg-[#c69728] text-[#241610] font-bold text-xs">+ Thêm hình ảnh tư liệu</button>
           </div>
+          <div id="archiveGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-8"></div>
+        </div>
+      </div>
 
+      <!-- MEMORIAL & STATS VIEW -->
+      <div id="memorialViewport" class="hidden flex-1 overflow-auto bg-[#f7efe0] p-4 sm:p-6">
+        <div class="max-w-7xl mx-auto space-y-6 pb-8">
+          <div class="bg-[#520909] text-[#fff8e6] rounded-2xl p-4 border-2 border-[#c69728] flex items-center justify-between">
+            <div>
+              <h2 class="font-serif-trad text-lg font-bold">Sổ Ngày Giỗ Âm Lịch &amp; Thống Kê Các Đời</h2>
+              <p class="text-xs text-[#f4dfb6]">Tổng hợp nhân đinh từng đời và danh sách ngày giỗ để tiện phụng sự.</p>
+            </div>
+          </div>
           <div id="kpiSummaryCards" class="grid grid-cols-2 sm:grid-cols-4 gap-3"></div>
-
           <div class="bg-[#fffaf0] rounded-2xl border border-[#c69728]/80 shadow-sm overflow-x-auto">
             <table class="w-full text-left border-collapse text-xs">
               <thead>
                 <tr class="bg-[#520909] text-[#fff8e6]">
-                  <th class="py-2.5 px-3 font-semibold">Đời thứ</th>
-                  <th class="py-2.5 px-3 font-semibold">Số thành viên</th>
-                  <th class="py-2.5 px-3 font-semibold">Tỷ trọng</th>
-                  <th class="py-2.5 px-3 font-semibold">Có ngày giỗ ÂL</th>
-                  <th class="py-2.5 px-3 font-semibold">Có nơi an táng</th>
-                  <th class="py-2.5 px-3 font-semibold">Khuyết tên / 0 con</th>
-                  <th class="py-2.5 px-3 font-semibold text-right">Lọc trên sơ đồ</th>
+                  <th class="py-2.5 px-3">Đời thứ</th>
+                  <th class="py-2.5 px-3">Số thành viên</th>
+                  <th class="py-2.5 px-3">Có ngày giỗ ÂL</th>
+                  <th class="py-2.5 px-3">Khuyết tên / 0 con</th>
+                  <th class="py-2.5 px-3 text-right">Thao tác</th>
                 </tr>
               </thead>
               <tbody id="generationStatsBody" class="divide-y divide-[#e4d4b5]"></tbody>
             </table>
           </div>
-        </section>
-
-        <section class="space-y-3 pt-2 border-t border-[#d8c49e]">
-          <div class="flex flex-wrap items-center justify-between gap-3">
-            <div>
-              <h3 class="font-serif-trad text-base sm:text-lg font-bold text-[#520909]">🕯️ Sổ Ngày Giỗ Âm Lịch Dòng Họ</h3>
-              <p class="text-xs text-[#695547]">Lọc theo tháng Âm lịch hoặc tìm tên cụ/ông/bà để chuẩn bị lễ cúng và giỗ chạp.</p>
-            </div>
-            <div class="flex items-center gap-2 flex-wrap">
-              <select id="memorialMonthFilter" onchange="renderMemorialAndStats()" class="px-3 py-1.5 rounded-lg border border-[#bfa36e] bg-[#fffaf0] text-xs font-semibold">
-                <option value="ALL">Tất cả các tháng Âm lịch</option>
-                <option value="1">Tháng Giêng (Tháng 1 ÂL)</option>
-                <option value="2">Tháng 2 ÂL</option>
-                <option value="3">Tháng 3 ÂL (Thanh minh)</option>
-                <option value="4">Tháng 4 ÂL</option>
-                <option value="5">Tháng 5 ÂL</option>
-                <option value="6">Tháng 6 ÂL</option>
-                <option value="7">Tháng 7 ÂL (Vu lan)</option>
-                <option value="8">Tháng 8 ÂL</option>
-                <option value="9">Tháng 9 ÂL</option>
-                <option value="10">Tháng 10 ÂL</option>
-                <option value="11">Tháng 11 ÂL</option>
-                <option value="12">Tháng Chạp (Tháng 12 ÂL)</option>
-                <option value="MISSING">Chưa cập nhật ngày giỗ</option>
-              </select>
-              <input id="memorialSearchInput" type="text" oninput="renderMemorialAndStats()" placeholder="Tìm tên người, ngày giỗ, nơi an táng..." class="px-3 py-1.5 rounded-lg border border-[#bfa36e] bg-[#fffaf0] text-xs w-56" />
-            </div>
-          </div>
-
           <div id="memorialListContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3"></div>
-        </section>
-
-        <section class="space-y-3 pt-2 border-t border-[#d8c49e]">
-          <div class="flex items-center justify-between flex-wrap gap-2">
-            <div>
-              <h3 class="font-serif-trad text-base sm:text-lg font-bold text-[#520909]">📋 Rà Soát Hồ Sơ Cần Bổ Sung Thông Tin</h3>
-              <p class="text-xs text-[#695547]">Các mục khuyết tên, chưa ghi ngày giỗ Âm lịch hoặc chưa ghi nơi an táng để ban biên tập điền dần.</p>
-            </div>
-            <div class="flex items-center gap-1.5 text-xs">
-              <button onclick="setAuditFilter('ALL')" id="auditBtnAll" class="px-2.5 py-1 rounded-lg bg-[#7a1414] text-white font-semibold">Tất cả cần bổ sung</button>
-              <button onclick="setAuditFilter('no_lunar')" id="auditBtnNoLunar" class="px-2.5 py-1 rounded-lg bg-[#fffaf0] border border-[#bfa36e] font-medium">Thiếu ngày giỗ</button>
-              <button onclick="setAuditFilter('no_burial')" id="auditBtnNoBurial" class="px-2.5 py-1 rounded-lg bg-[#fffaf0] border border-[#bfa36e] font-medium">Thiếu mộ phần</button>
-              <button onclick="setAuditFilter('missing_name')" id="auditBtnMissingName" class="px-2.5 py-1 rounded-lg bg-[#fffaf0] border border-[#bfa36e] font-medium">Khuyết tên</button>
-            </div>
-          </div>
-
-          <div id="auditListContainer" class="bg-[#fffaf0] rounded-2xl border border-[#c69728]/80 divide-y divide-[#e4d4b5] shadow-sm"></div>
-        </section>
+        </div>
       </div>
-    </div>
 
-    <!-- RIGHT DETAIL SIDEBAR DRAWER -->
-    <aside id="detailDrawer" class="w-full sm:w-[400px] bg-[#f7efe0] border-l-2 border-[#c69728] shadow-2xl z-30 hidden flex-col shrink-0">
-      <div class="bg-[#520909] text-[#fff8e6] px-4 py-3 flex items-center justify-between border-b border-[#c69728]">
-        <span class="font-serif-trad font-bold text-sm tracking-wide">HỒ SƠ PHẢ HỆ CHI TIẾT</span>
-        <button onclick="closeDetailDrawer()" class="text-[#f5e6ba] hover:text-white text-lg leading-none">✕</button>
+      <!-- RIGHT DETAIL SIDEBAR DRAWER -->
+      <aside id="detailDrawer" class="w-full sm:w-[400px] bg-[#f7efe0] border-l-2 border-[#c69728] shadow-2xl z-30 hidden flex-col shrink-0">
+        <div class="bg-[#520909] text-[#fff8e6] px-4 py-3 flex items-center justify-between border-b border-[#c69728]">
+          <span class="font-serif-trad font-bold text-sm tracking-wide">HỒ SƠ PHẢ HỆ CHI TIẾT</span>
+          <button onclick="closeDetailDrawer()" class="text-[#f5e6ba] hover:text-white text-lg leading-none">✕</button>
+        </div>
+        <div id="detailContent" class="flex-1 overflow-y-auto p-4 space-y-4 text-xs"></div>
+      </aside>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#460707] text-[#f5e6ba] border-t-2 border-[#c69728] px-3 sm:px-5 py-1.5 z-30 shrink-0 text-[11px] flex flex-wrap items-center justify-between gap-2">
+      <div>
+        <span class="px-1.5 py-0.5 rounded bg-[#c69728] text-[#241610] font-bold text-[10px]">Bản quyền © Họ Nguyễn - Tân Lập</span>
+        <span class="ml-2">Biên tập: Ông Nguyễn Đăng • Kỹ thuật: Ông Nguyễn Duy Đông</span>
       </div>
-      <div id="detailContent" class="flex-1 overflow-y-auto p-4 space-y-4 text-xs"></div>
-    </aside>
-  </main>
+      <div>Cổ Phả • 8 Đời • Cập nhật 2026</div>
+    </footer>
+  </div>
 
   <!-- MODAL: ADD / EDIT MEMBER -->
-  <div id="memberModal" class="fixed inset-0 bg-black/60 backdrop-blur-[1px] z-50 hidden items-center justify-center p-3">
+  <div id="memberModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-3">
     <div class="bg-[#f7efe0] border-2 border-[#c69728] rounded-2xl shadow-2xl w-full max-w-2xl max-h-[92vh] flex flex-col overflow-hidden">
       <div class="bg-[#520909] text-[#fff8e6] px-5 py-3.5 flex items-center justify-between">
         <h3 id="memberModalTitle" class="font-serif-trad font-bold text-base">Thêm Thành Viên Mới</h3>
         <button onclick="closeMemberModal()" class="text-[#f5e6ba] hover:text-white text-xl leading-none">✕</button>
       </div>
-
       <form id="memberForm" onsubmit="submitMemberForm(event)" class="p-5 overflow-y-auto space-y-3.5 text-xs">
         <input type="hidden" id="editMemberId" />
-
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
             <label class="block font-semibold text-[#520909] mb-1">Họ và tên *</label>
-            <input id="mName" type="text" required placeholder="VD: Nguyễn Văn Minh" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] focus:outline-none focus:border-[#7a1414]" />
+            <input id="mName" type="text" required placeholder="VD: Nguyễn Văn Minh" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0]" />
           </div>
-
           <div>
             <label class="block font-semibold text-[#520909] mb-1">Tên húy / Tên tự / Hiệu</label>
-            <input id="mCourtesy" type="text" placeholder="VD: Quý Công, Đức Thủy Tổ..." class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] focus:outline-none focus:border-[#7a1414]" />
+            <input id="mCourtesy" type="text" placeholder="VD: Quý Công..." class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0]" />
           </div>
         </div>
-
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
           <div>
-            <label class="block font-semibold text-[#520909] mb-1">Cha / Nhánh trên (tự tính Đời)</label>
-            <select id="mParentId" onchange="autoCalcGeneration()" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] focus:outline-none focus:border-[#7a1414]"></select>
+            <label class="block font-semibold text-[#520909] mb-1">Cha / Nhánh trên</label>
+            <select id="mParentId" onchange="autoCalcGeneration()" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0]"></select>
           </div>
-
           <div>
             <label class="block font-semibold text-[#520909] mb-1">Đời thứ *</label>
-            <input id="mGeneration" type="number" min="1" max="30" required class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] focus:outline-none focus:border-[#7a1414]" />
+            <input id="mGeneration" type="number" min="1" max="30" required class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0]" />
           </div>
-
           <div>
-            <label class="block font-semibold text-[#520909] mb-1">Thứ tự con / Ghi chú</label>
-            <input id="mBirthOrder" type="text" placeholder="VD: Trưởng nam, Thứ hai..." class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] focus:outline-none focus:border-[#7a1414]" />
+            <label class="block font-semibold text-[#520909] mb-1">Thứ tự / Ghi chú chi</label>
+            <input id="mBirthOrder" type="text" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0]" />
           </div>
         </div>
-
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
             <label class="block font-semibold text-[#520909] mb-1">Giới tính</label>
-            <select id="mGender" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] focus:outline-none focus:border-[#7a1414]">
+            <select id="mGender" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0]">
               <option value="male">Nam</option>
               <option value="female">Nữ</option>
             </select>
           </div>
-
           <div>
             <label class="block font-semibold text-[#520909] mb-1">Tình trạng phả hệ</label>
-            <select id="mStatus" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] focus:outline-none focus:border-[#7a1414]">
-              <option value="alive">Còn sống / Đang cập nhật</option>
+            <select id="mStatus" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0]">
               <option value="deceased">Đã tạ thế</option>
+              <option value="alive">Còn sống / Đang cập nhật</option>
               <option value="no_issue">Vô tự (0 con)</option>
               <option value="missing">Khuyết tên / Chưa rõ</option>
             </select>
           </div>
         </div>
-
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
           <div>
-            <label class="block font-semibold text-[#520909] mb-1">Năm sinh (Dương/Âm)</label>
-            <input id="mBirthYear" type="text" placeholder="VD: 1945 hoặc ~1890" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] focus:outline-none focus:border-[#7a1414]" />
+            <label class="block font-semibold text-[#520909] mb-1">Năm sinh</label>
+            <input id="mBirthYear" type="text" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0]" />
           </div>
           <div>
             <label class="block font-semibold text-[#520909] mb-1">Năm mất</label>
-            <input id="mDeathYear" type="text" placeholder="VD: 2018" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] focus:outline-none focus:border-[#7a1414]" />
+            <input id="mDeathYear" type="text" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0]" />
           </div>
           <div>
             <label class="block font-semibold text-[#520909] mb-1">Ngày giỗ Âm lịch</label>
-            <input id="mLunarDeath" type="text" placeholder="VD: 12/07 ÂL" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] focus:outline-none focus:border-[#7a1414]" />
+            <input id="mLunarDeath" type="text" placeholder="VD: 12/07 ÂL" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0]" />
           </div>
         </div>
-
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
             <label class="block font-semibold text-[#520909] mb-1">Vợ / Chồng</label>
-            <input id="mSpouse" type="text" placeholder="Tên vợ hoặc chồng" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] focus:outline-none focus:border-[#7a1414]" />
+            <input id="mSpouse" type="text" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0]" />
           </div>
           <div>
             <label class="block font-semibold text-[#520909] mb-1">Mộ phần / Nơi an táng</label>
-            <input id="mBurial" type="text" placeholder="VD: Nghĩa trang Thôn Tân Lập" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] focus:outline-none focus:border-[#7a1414]" />
+            <input id="mBurial" type="text" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0]" />
           </div>
         </div>
-
         <div>
-          <label class="block font-semibold text-[#520909] mb-1">Ảnh chân dung (Tải ảnh hoặc dán URL)</label>
-          <div class="flex items-center gap-2">
-            <input id="mAvatar" type="text" placeholder="https://... hoặc tải tệp ảnh bên cạnh" class="flex-1 px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] focus:outline-none focus:border-[#7a1414]" />
-            <label class="px-3 py-2 rounded-lg bg-[#e5d4b1] hover:bg-[#d7c197] border border-[#bfa36e] font-semibold cursor-pointer shrink-0">
-              Chọn ảnh
-              <input type="file" accept="image/*" onchange="handleAvatarUpload(event)" class="hidden" />
-            </label>
-          </div>
+          <label class="block font-semibold text-[#520909] mb-1">Tiểu sử / Ghi chú</label>
+          <textarea id="mBio" rows="3" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0]"></textarea>
         </div>
-
-        <div>
-          <label class="block font-semibold text-[#520909] mb-1">Tiểu sử / Công trạng / Ghi chú</label>
-          <textarea id="mBio" rows="3" placeholder="Ghi chú về nghề nghiệp, đóng góp, chi nhánh hoặc thông tin bổ sung..." class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] focus:outline-none focus:border-[#7a1414]"></textarea>
-        </div>
-
         <div class="pt-2 flex items-center justify-end gap-2 border-t border-[#d8c49e]">
-          <button type="button" onclick="closeMemberModal()" class="px-4 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] hover:bg-[#efe2c6] font-semibold">
-            Hủy bỏ
-          </button>
-          <button type="submit" class="px-5 py-2 rounded-lg bg-[#7a1414] hover:bg-[#4f0909] text-white font-semibold shadow">
-            Lưu thông tin
-          </button>
+          <button type="button" onclick="closeMemberModal()" class="px-4 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] font-semibold">Hủy bỏ</button>
+          <button type="submit" class="px-5 py-2 rounded-lg bg-[#7a1414] hover:bg-[#4f0909] text-white font-semibold">Lưu thông tin</button>
         </div>
       </form>
     </div>
   </div>
 
-  <!-- MODAL: QUICK BATCH ADD CHILDREN -->
-  <div id="batchModal" class="fixed inset-0 bg-black/60 backdrop-blur-[1px] z-50 hidden items-center justify-center p-3">
+  <!-- MODAL: BATCH ADD CHILDREN -->
+  <div id="batchModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-3">
     <div class="bg-[#f7efe0] border-2 border-[#c69728] rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden">
       <div class="bg-[#520909] text-[#fff8e6] px-5 py-3.5 flex items-center justify-between">
         <h3 class="font-serif-trad font-bold text-base">Thêm Nhanh Nhiều Người Con</h3>
@@ -858,289 +520,1034 @@
           <select id="batchParentId" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0]"></select>
         </div>
         <div>
-          <label class="block font-semibold text-[#520909] mb-1">Danh sách tên con (mỗi người một dòng hoặc cách nhau bởi dấu phẩy)</label>
-          <textarea id="batchNames" rows="5" required placeholder="VD:&#10;Nguyễn Văn A&#10;Nguyễn Văn B&#10;Nguyễn Thị C" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0]"></textarea>
+          <label class="block font-semibold text-[#520909] mb-1">Danh sách tên con (mỗi dòng 1 tên)</label>
+          <textarea id="batchNames" rows="5" required placeholder="Nguyễn Văn A&#10;Nguyễn Văn B" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0]"></textarea>
         </div>
         <div class="flex justify-end gap-2 pt-2 border-t border-[#d8c49e]">
           <button type="button" onclick="closeBatchModal()" class="px-4 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] font-semibold">Hủy</button>
-          <button type="submit" class="px-4 py-2 rounded-lg bg-[#c69728] hover:bg-[#d9ab38] text-[#241610] font-bold">Tạo hàng loạt</button>
+          <button type="submit" class="px-4 py-2 rounded-lg bg-[#c69728] text-[#241610] font-bold">Tạo hàng loạt</button>
         </div>
       </form>
     </div>
   </div>
 
   <!-- MODAL: SUPABASE CLOUD CONFIG -->
-  <div id="cloudModal" class="fixed inset-0 bg-black/60 backdrop-blur-[1px] z-50 hidden items-center justify-center p-3">
-    <div class="bg-[#f7efe0] border-2 border-[#c69728] rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden">
+  <div id="cloudModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-3">
+    <div class="bg-[#f7efe0] border-2 border-[#c69728] rounded-2xl shadow-2xl w-full max-w-xl overflow-hidden">
       <div class="bg-[#520909] text-[#fff8e6] px-5 py-3.5 flex items-center justify-between">
-        <h3 class="font-serif-trad font-bold text-base">Kết Nối Cơ Sở Dữ Liệu Supabase</h3>
+        <h3 class="font-serif-trad font-bold text-base">☁️ Đồng Bộ Dữ Liệu Qua Supabase</h3>
         <button onclick="closeCloudModal()" class="text-[#f5e6ba] hover:text-white text-xl leading-none">✕</button>
       </div>
-      <form onsubmit="saveCloudConfig(event)" class="p-5 space-y-3.5 text-xs">
-        <p class="text-[#695547] leading-relaxed">
-          Nhập <strong>Project URL</strong> và <strong>Publishable / anon key</strong> từ mục <em>Project Settings &gt; API</em> trên Supabase để mọi người cùng xem và cập nhật đồng bộ cả <code>family_members</code> lẫn <code>archive_photos</code>.
-        </p>
+      <form onsubmit="saveCloudConfig(event)" class="p-5 space-y-3 text-xs">
+        <p class="text-[#695547]">Nhập Supabase URL và Anon Key để đồng bộ dữ liệu gia phả trực tuyến. Bảng SQL mẫu có thể chạy trong SQL Editor của Supabase:</p>
+        <pre class="bg-[#241610] text-[#f7e5a6] p-2.5 rounded-lg overflow-x-auto text-[10.5px]">create table if not exists family_tree_state (
+  id text primary key,
+  members jsonb not null,
+  photos jsonb not null default '[]'::jsonb,
+  updated_at timestamptz default now()
+);</pre>
         <div>
           <label class="block font-semibold text-[#520909] mb-1">Supabase Project URL</label>
-          <input id="sbUrlInput" type="url" required placeholder="https://xxxxxxxxxxxx.supabase.co" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0]" />
+          <input id="sbUrl" type="url" placeholder="https://xxxx.supabase.co" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0]" />
         </div>
         <div>
-          <label class="block font-semibold text-[#520909] mb-1">Supabase anon / publishable key</label>
-          <input id="sbKeyInput" type="text" required placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0]" />
+          <label class="block font-semibold text-[#520909] mb-1">Supabase Anon Key</label>
+          <input id="sbKey" type="text" placeholder="eyJhbGciOi..." class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0]" />
         </div>
-        <div class="bg-[#efe2c6] p-3 rounded-xl border border-[#d8c49e] space-y-1.5">
-          <div class="flex items-center justify-between gap-2">
-            <span class="font-semibold text-[#520909]">Link mở trên máy/điện thoại khác (tự động đồng bộ):</span>
-            <button type="button" onclick="copyShareSyncLink()" class="px-2.5 py-1 rounded bg-[#c69728] hover:bg-[#d9ab38] text-[#241610] font-bold text-[11px]">
-              Sao chép link
-            </button>
-          </div>
-          <input id="shareSyncLinkInput" type="text" readonly placeholder="Lưu cấu hình trước để tạo link tự động đồng bộ..." class="w-full px-2.5 py-1.5 rounded border border-[#bfa36e] bg-[#fffaf0] text-[11px] text-[#695547]" />
-        </div>
-
-        <div class="flex items-center justify-between pt-2 border-t border-[#d8c49e]">
-          <button type="button" onclick="clearCloudConfig()" class="px-3 py-2 rounded-lg border border-red-300 text-red-700 hover:bg-red-50 font-semibold">
-            Ngắt kết nối DB
-          </button>
+        <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-[#d8c49e]">
+          <button type="button" onclick="pullFromCloud()" class="px-3 py-2 rounded-lg bg-[#efe2c6] hover:bg-[#e0cca3] border border-[#bfa36e] font-semibold">⬇ Tải từ Cloud</button>
           <div class="flex gap-2">
-            <button type="button" onclick="closeCloudModal()" class="px-4 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] font-semibold">Đóng</button>
-            <button type="submit" class="px-4 py-2 rounded-lg bg-[#7a1414] hover:bg-[#4f0909] text-white font-semibold">Lưu & Đồng bộ</button>
+            <button type="button" onclick="closeCloudModal()" class="px-3.5 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] font-semibold">Đóng</button>
+            <button type="submit" class="px-4 py-2 rounded-lg bg-[#7a1414] text-white font-bold">Lưu &amp; Đẩy lên Cloud</button>
           </div>
         </div>
       </form>
     </div>
   </div>
 
-  <!-- MODAL: ADD / EDIT ARCHIVE PHOTO -->
-  <div id="photoModal" class="fixed inset-0 bg-black/65 backdrop-blur-[1px] z-50 hidden items-center justify-center p-3">
-    <div class="bg-[#f7efe0] border-2 border-[#c69728] rounded-2xl shadow-2xl w-full max-w-2xl max-h-[92vh] flex flex-col overflow-hidden">
-      <div class="bg-[#520909] text-[#fff8e6] px-5 py-3.5 flex items-center justify-between">
-        <h3 id="photoModalTitle" class="font-serif-trad font-bold text-base">Thêm Hình Ảnh Tư Liệu / Lăng Mộ Tổ</h3>
-        <button onclick="closePhotoModal()" class="text-[#f5e6ba] hover:text-white text-xl leading-none">✕</button>
-      </div>
-
-      <form id="photoForm" onsubmit="submitPhotoForm(event)" class="p-5 overflow-y-auto space-y-3.5 text-xs">
-        <input type="hidden" id="editPhotoId" />
-
-        <div>
-          <label class="block font-semibold text-[#520909] mb-1">Tải ảnh từ máy tính/điện thoại hoặc dán đường dẫn URL *</label>
-          <div class="flex items-center gap-2">
-            <input id="pImageUrl" type="text" required oninput="updatePhotoPreview(this.value)" placeholder="Chọn ảnh bên cạnh (tự nén tối ưu) hoặc dán link https://..." class="flex-1 px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] focus:outline-none focus:border-[#7a1414]" />
-            <label class="px-3.5 py-2 rounded-lg bg-[#c69728] hover:bg-[#d9ab38] text-[#241610] font-bold cursor-pointer shrink-0 shadow-sm">
-              📷 Chọn ảnh
-              <input type="file" accept="image/*" onchange="handleArchivePhotoUpload(event)" class="hidden" />
-            </label>
-          </div>
-          <div id="photoPreviewBox" class="hidden mt-2 relative rounded-xl overflow-hidden border border-[#c69728] bg-stone-900 max-h-52 flex items-center justify-center">
-            <img id="photoPreviewImg" src="" alt="Xem trước" class="max-h-52 w-auto object-contain" />
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div>
-            <label class="block font-semibold text-[#520909] mb-1">Tiêu đề bức ảnh *</label>
-            <input id="pTitle" type="text" required placeholder="VD: Toàn cảnh Lăng mộ Thủy Tổ & con cháu tảo mộ" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] focus:outline-none focus:border-[#7a1414]" />
-          </div>
-
-          <div>
-            <label class="block font-semibold text-[#520909] mb-1">Phân loại tư liệu</label>
-            <select id="pCategory" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] focus:outline-none focus:border-[#7a1414]">
-              <option value="tomb">🪦 Lăng mộ Tổ (Thủy Tổ / Tiền Tổ / Các chi)</option>
-              <option value="descendants">👨‍👩‍👧‍👦 Con cháu bái yết / Tảo mộ</option>
-              <option value="shrine">🏯 Nhà thờ họ / Lễ chạp / Giỗ Tổ</option>
-              <option value="document">📜 Bia ký / Hoành phi / Sắc phong</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div>
-            <label class="block font-semibold text-[#520909] mb-1">Thời gian chụp (Năm / Dịp lễ)</label>
-            <input id="pDateTaken" type="text" placeholder="VD: Thanh Minh 2026 / Tháng Chạp Ất Tỵ" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] focus:outline-none focus:border-[#7a1414]" />
-          </div>
-
-          <div>
-            <label class="block font-semibold text-[#520909] mb-1">Địa điểm / Khu mộ</label>
-            <input id="pLocation" type="text" placeholder="VD: Khu lăng mộ họ Nguyễn - Thôn Tân Lập" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] focus:outline-none focus:border-[#7a1414]" />
-          </div>
-        </div>
-
-        <div class="bg-[#efe2c6] p-3 rounded-xl border border-[#d8c49e] space-y-2.5">
-          <div>
-            <label class="block font-semibold text-[#520909] mb-1">Liên kết trực tiếp tới Mộ phần của vị Tổ (nếu có)</label>
-            <select id="pRelatedAncestorId" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] focus:outline-none focus:border-[#7a1414]"></select>
-            <p class="text-[11px] text-[#695547] mt-0.5">Ảnh này sẽ tự động hiển thị trong mục <strong>Mộ phần &amp; Hình ảnh</strong> khi mở hồ sơ của vị Tổ được chọn.</p>
-          </div>
-
-          <div>
-            <label class="block font-semibold text-[#520909] mb-1">Gắn thẻ con cháu đứng trong ảnh (chọn nhiều người)</label>
-            <div class="flex gap-1.5">
-              <select id="pTagMemberSelect" class="flex-1 px-3 py-1.5 rounded-lg border border-[#bfa36e] bg-[#fffaf0] focus:outline-none focus:border-[#7a1414]"></select>
-              <button type="button" onclick="addTaggedMemberFromSelect()" class="px-3 py-1.5 rounded-lg bg-[#7a1414] hover:bg-[#4f0909] text-white font-semibold shrink-0">
-                + Gắn thẻ
-              </button>
-            </div>
-            <div id="pTaggedChips" class="flex flex-wrap gap-1.5 mt-2"></div>
-          </div>
-        </div>
-
-        <div>
-          <label class="block font-semibold text-[#520909] mb-1">Chú thích chi tiết (Vị trí đứng từ trái sang phải, bối cảnh...)</label>
-          <textarea id="pCaption" rows="3" placeholder="VD: Hàng trước từ trái qua: ông Nguyễn Văn Hùng, ông Nguyễn Văn Dũng... chụp trước khu lăng mộ Thủy Tổ Nguyễn Quý Công nhân dịp tu sửa lăng mộ." class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] focus:outline-none focus:border-[#7a1414]"></textarea>
-        </div>
-
-        <div class="pt-2 flex items-center justify-end gap-2 border-t border-[#d8c49e]">
-          <button type="button" onclick="closePhotoModal()" class="px-4 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] hover:bg-[#efe2c6] font-semibold">
-            Hủy bỏ
-          </button>
-          <button type="submit" class="px-5 py-2 rounded-lg bg-[#7a1414] hover:bg-[#4f0909] text-white font-semibold shadow">
-            Lưu hình ảnh tư liệu
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <footer class="bg-[#460707] text-[#f5e6ba] border-t-2 border-[#c69728] px-3 sm:px-5 py-1.5 z-30 shrink-0 text-[11px] flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-    <div class="flex items-center gap-2 flex-wrap">
-      <span class="px-1.5 py-0.5 rounded bg-[#c69728] text-[#241610] font-bold text-[10px]">Bản quyền © Họ Nguyễn - Tân Lập</span>
-      <span class="text-[#f7e5a6]/90">•</span>
-      <span><strong class="text-[#fff8e6] font-semibold">Biên tập nội dung:</strong> Ông Nguyễn Đăng <span class="text-[#f5e6ba] text-[10px]">(Đời 6, nhánh ông Nguyễn Kiểm [Đ5] → Nguyễn Miền [Đ4] → Nguyễn Lành [Đ3])</span></span>
-      <span class="text-[#f7e5a6]/70">•</span>
-      <span><strong class="text-[#fff8e6] font-semibold">Kỹ thuật &amp; Thiết kế:</strong> Ông Nguyễn Duy Đông <span class="text-[#f5e6ba] text-[10px]">(Đời 7, nhánh Nguyễn Đăng [Đ6] → ông Nguyễn Kiểm [Đ5] → Nguyễn Miền [Đ4] → Nguyễn Lành [Đ3])</span></span>
-      <span class="text-[#f7e5a6]/70">•</span>
-      <span class="text-[#e6cf9c] italic">Hội đồng gia tộc &amp; Ban biên soạn</span>
-    </div>
-    <div class="flex items-center gap-2 text-[10.5px] text-[#f4dfb6]">
-      <span class="font-semibold text-[#f7e5a6]">Cổ Phả • 8 Đời</span>
-      <span>•</span>
-      <span>Cập nhật 2026</span>
-    </div>
-  </footer>
-
-  <!-- MODAL: LIGHTBOX XEM ẢNH PHÓNG TO -->
-  <div id="lightboxModal" onclick="if(event.target===this) closeLightbox()" class="fixed inset-0 bg-black/85 backdrop-blur-xs z-50 hidden items-center justify-center p-3 sm:p-6">
-    <div class="bg-[#f7efe0] border-2 border-[#c69728] rounded-2xl shadow-2xl w-full max-w-4xl max-h-[94vh] flex flex-col overflow-hidden">
-      <div class="bg-[#520909] text-[#fff8e6] px-4 py-3 flex items-center justify-between">
-        <div class="min-w-0 pr-3">
-          <h3 id="lbTitle" class="font-serif-trad font-bold text-sm sm:text-base truncate">Chi tiết hình ảnh</h3>
-          <p id="lbMeta" class="text-[11px] text-[#f5e6ba] truncate"></p>
-        </div>
-        <button onclick="closeLightbox()" class="text-[#f5e6ba] hover:text-white text-xl leading-none shrink-0">✕</button>
-      </div>
-      <div class="bg-stone-950 flex-1 overflow-auto flex items-center justify-center p-2 min-h-[260px]">
-        <img id="lbImage" src="" alt="" class="max-h-[62vh] w-auto object-contain rounded" />
-      </div>
-      <div id="lbFooter" class="p-4 bg-[#f7efe0] border-t border-[#d8c49e] text-xs space-y-2 max-h-44 overflow-y-auto"></div>
-    </div>
-  </div>
-
-  <!-- MODAL: TÙY CHỌN IN / XUẤT PDF TRANG ĐẸP -->
-  <div id="printOptionsModal" onclick="if(event.target===this) closePrintModal()" class="fixed inset-0 bg-black/60 backdrop-blur-[1px] z-50 hidden items-center justify-center p-3">
+  <!-- MODAL: ADD ARCHIVE PHOTO -->
+  <div id="photoModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-3">
     <div class="bg-[#f7efe0] border-2 border-[#c69728] rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden">
       <div class="bg-[#520909] text-[#fff8e6] px-5 py-3.5 flex items-center justify-between">
-        <h3 class="font-serif-trad font-bold text-base">🖨️ In Ấn &amp; Xuất Trang Gia Phả Đẹp (PDF)</h3>
+        <h3 class="font-serif-trad font-bold text-base">Thêm Hình Ảnh Tư Liệu</h3>
+        <button onclick="closePhotoModal()" class="text-[#f5e6ba] hover:text-white text-xl leading-none">✕</button>
+      </div>
+      <form onsubmit="submitPhotoForm(event)" class="p-5 space-y-3 text-xs">
+        <div>
+          <label class="block font-semibold text-[#520909] mb-1">Tiêu đề *</label>
+          <input id="pTitle" type="text" required class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0]" />
+        </div>
+        <div>
+          <label class="block font-semibold text-[#520909] mb-1">URL ảnh hoặc tải file *</label>
+          <div class="flex gap-2">
+            <input id="pImageUrl" type="text" required placeholder="https://..." class="flex-1 px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0]" />
+            <label class="px-3 py-2 rounded-lg bg-[#c69728] text-[#241610] font-bold cursor-pointer">
+              Chọn ảnh
+              <input type="file" accept="image/*" onchange="handlePhotoFile(event)" class="hidden" />
+            </label>
+          </div>
+        </div>
+        <div>
+          <label class="block font-semibold text-[#520909] mb-1">Chú thích</label>
+          <textarea id="pCaption" rows="2" class="w-full px-3 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0]"></textarea>
+        </div>
+        <div class="flex justify-end gap-2 pt-2 border-t border-[#d8c49e]">
+          <button type="button" onclick="closePhotoModal()" class="px-4 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] font-semibold">Hủy</button>
+          <button type="submit" class="px-4 py-2 rounded-lg bg-[#7a1414] text-white font-semibold">Lưu ảnh</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: PRINT OPTIONS -->
+  <div id="printOptionsModal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-3">
+    <div class="bg-[#f7efe0] border-2 border-[#c69728] rounded-2xl shadow-2xl w-full max-w-md overflow-hidden">
+      <div class="bg-[#520909] text-[#fff8e6] px-5 py-3.5 flex items-center justify-between">
+        <h3 class="font-serif-trad font-bold text-base">🖨️ In / Xuất PDF</h3>
         <button onclick="closePrintModal()" class="text-[#f5e6ba] hover:text-white text-xl leading-none">✕</button>
       </div>
       <div class="p-5 space-y-4 text-xs">
-        <p class="text-[#695547] leading-relaxed">
-          Chọn mẫu trang trình bày trang trọng dành cho in giấy hoặc lưu PDF:
-        </p>
-
-        <div class="space-y-2.5">
-          <label class="flex items-start gap-2.5 p-3 rounded-xl border-2 border-[#c69728] bg-[#f3e4c3] hover:bg-[#ebd7ac] cursor-pointer">
-            <input type="radio" name="printMode" value="book" checked class="mt-0.5 accent-[#7a1414]" />
-            <div>
-              <div class="font-bold text-[#520909]">0. In cuốn sổ gia phả hoàn chỉnh (Chuẩn đóng quyển A4)</div>
-              <div class="text-[11px] text-[#241610]">Khổ giấy <strong>A4 dọc</strong>, phông <strong>Times New Roman cỡ 14</strong>, căn lề đóng gáy (<strong>Trên 2cm, Dưới 2cm, Trái 3cm, Phải 2cm</strong>), gồm trang bìa, bài thơ <em>Ta cần nhớ</em>, phả hệ 8 đời &amp; sổ giỗ.</div>
-            </div>
-          </label>
-
-          <label class="flex items-start gap-2.5 p-3 rounded-xl border border-[#c69728]/70 bg-[#fffaf0] hover:bg-[#efe2c6] cursor-pointer">
-            <input type="radio" name="printMode" value="member" class="mt-0.5 accent-[#7a1414]" />
-            <div>
-              <div class="font-bold text-[#520909]">1. Hồ sơ chi tiết cá nhân &amp; nhánh liên quan</div>
-              <div class="text-[11px] text-[#695547]">In trang tiểu sử, đường dẫn tổ tiên, thông tin giỗ/mộ phần và danh sách con cháu của người đang chọn (mặc định: <span id="printTargetMemberName" class="font-semibold text-[#241610]">Nguyễn Quý Công</span>).</div>
-            </div>
-          </label>
-
-          <label class="flex items-start gap-2.5 p-3 rounded-xl border border-[#c69728]/70 bg-[#fffaf0] hover:bg-[#efe2c6] cursor-pointer">
-            <input type="radio" name="printMode" value="branch" class="mt-0.5 accent-[#7a1414]" />
-            <div>
-              <div class="font-bold text-[#520909]">2. Cây phả hệ &amp; danh sách theo nhánh cụ thể</div>
-              <div class="text-[11px] text-[#695547] mb-1.5">In phả hệ của một nhánh/chi cụ thể để phát cho các hộ trong nhánh:</div>
-              <select id="printBranchSelect" class="w-full px-2.5 py-1.5 rounded-lg border border-[#bfa36e] bg-[#f7efe0] text-xs font-semibold"></select>
-            </div>
-          </label>
-
-          <label class="flex items-start gap-2.5 p-3 rounded-xl border border-[#c69728]/70 bg-[#fffaf0] hover:bg-[#efe2c6] cursor-pointer">
-            <input type="radio" name="printMode" value="list" class="mt-0.5 accent-[#7a1414]" />
-            <div>
-              <div class="font-bold text-[#520909]">3. Danh sách toàn bộ thành viên theo đời</div>
-              <div class="text-[11px] text-[#695547]">In bảng danh sách phân tầng từ Đời 1 đến Đời 8 để dán bảng tin hoặc đối chiếu.</div>
-            </div>
-          </label>
-
-          <label class="flex items-start gap-2.5 p-3 rounded-xl border border-[#c69728]/70 bg-[#fffaf0] hover:bg-[#efe2c6] cursor-pointer">
-            <input type="radio" name="printMode" value="memorial" class="mt-0.5 accent-[#7a1414]" />
-            <div>
-              <div class="font-bold text-[#520909]">4. Sổ ngày giỗ Âm lịch &amp; thống kê các đời</div>
-              <div class="text-[11px] text-[#695547]">In danh mục ngày giỗ theo tháng Âm lịch và bảng thống kê các đời phục vụ ban lễ / giỗ Tổ.</div>
-            </div>
-          </label>
-        </div>
-
-        <div class="pt-2 flex items-center justify-end gap-2 border-t border-[#d8c49e]">
-          <button type="button" onclick="closePrintModal()" class="px-4 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] font-semibold">Hủy</button>
-          <button type="button" onclick="executePrintFromModal()" class="px-5 py-2 rounded-lg bg-[#7a1414] hover:bg-[#4f0909] text-white font-bold shadow flex items-center gap-1.5">
-            <span>🖨️</span><span>Xem trước &amp; In / Lưu PDF</span>
-          </button>
+        <p class="text-[#695547]">In toàn bộ danh sách gia phả 8 đời của Họ Nguyễn - Thôn Tân Lập:</p>
+        <div class="flex justify-end gap-2">
+          <button type="button" onclick="closePrintModal()" class="px-4 py-2 rounded-lg border border-[#bfa36e] bg-[#fffaf0] font-semibold">Đóng</button>
+          <button type="button" onclick="printFullList()" class="px-4 py-2 rounded-lg bg-[#7a1414] text-white font-bold">In ngay</button>
         </div>
       </div>
     </div>
   </div>
 
-  </div>
-
-  <!-- KHU VỰC TRANG IN ĐẸP -->
   <div id="printSheetView"></div>
 
   <script>
-    // =========================================================================
-    // 1. DỮ LIỆU GỐC 8 ĐỜI: SƠ ĐỒ KÝ PHẢ HỌ NGUYỄN - Thôn Tân Lập
-    // =========================================================================
     const INITIAL_MEMBERS = [
-      // ĐỜI 1: THỦY TỔ
-      { id: 'g1_thuy_to', parentId: null, name: 'Nguyễn Quý Công', courtesyName: 'Thủy Tổ Họ Nguyễn', gender: 'male', generation: 1, birthOrder: 'Đời 1 - Thủy Tổ', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: 'Thôn Tân Lập', bio: 'Đức Thủy Tổ họ Nguyễn tại Thôn Tân Lập.', avatar: '' },
+      { id: 'g1_thuy_to', parentId: null, name: 'Nguyễn Quý Công', courtesyName: 'Thủy Tổ Họ Nguyễn', gender: 'male', generation: 1, birthOrder: 'Đời 1 - Thủy Tổ', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: 'Thôn Tân Lập', bio: 'Đức Thủy Tổ họ Nguyễn tại Thôn Tân Lập.' },
+      { id: 'g2_ha_quy_ngoc', parentId: 'g1_thuy_to', name: 'Nguyễn Quý Ngọc', courtesyName: 'Tiền Tổ', gender: 'male', generation: 2, birthOrder: 'Đời 2 - Tiền Tổ', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: 'Thôn Tân Lập', bio: 'Tiền Tổ họ Nguyễn, sinh ra các nhánh phát triển về sau.' },
+      { id: 'g3_ha_lanh', parentId: 'g2_ha_quy_ngoc', name: 'Nguyễn Lạnh', courtesyName: '', gender: 'male', generation: 3, birthOrder: 'Nhánh trái', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Con Tiền Tổ Nguyễn Quý Ngọc, thuộc nhánh bên trái.' },
+      { id: 'g3_ha_van_ra', parentId: 'g2_ha_quy_ngoc', name: 'Nguyễn Văn Rạ', courtesyName: '', gender: 'male', generation: 3, birthOrder: 'Nhánh giữa', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Con Tiền Tổ Nguyễn Quý Ngọc, thuộc nhánh giữa.' },
+      { id: 'g3_nhanh_phai', parentId: 'g2_ha_quy_ngoc', name: '(Khuyết tên)', courtesyName: 'Nhánh phải', gender: 'male', generation: 3, birthOrder: 'Nhánh phải', status: 'missing', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Ô nhánh bên phải trên sơ đồ gốc chưa ghi tên.' },
+      { id: 'g4_ha_mien', parentId: 'g3_ha_lanh', name: 'Nguyễn Miền', courtesyName: '', gender: 'male', generation: 4, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '' },
+      { id: 'g4_ha_cau', parentId: 'g3_ha_lanh', name: 'Nguyễn Cậu', courtesyName: '', gender: 'male', generation: 4, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '' },
+      { id: 'g4_ha_rang', parentId: 'g3_ha_van_ra', name: 'Nguyễn Rạng', courtesyName: '', gender: 'male', generation: 4, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '' },
+      { id: 'g4_ha_ku', parentId: 'g3_ha_van_ra', name: 'Nguyễn Ku', courtesyName: '', gender: 'male', generation: 4, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '' },
+      { id: 'g4_phai_1', parentId: 'g3_nhanh_phai', name: '(Khuyết tên)', courtesyName: '', gender: 'male', generation: 4, birthOrder: '', status: 'missing', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '' },
+      { id: 'g5_ha_mien_con', parentId: 'g4_ha_mien', name: 'Nguyễn (Đời 5 - nhánh Miền)', courtesyName: '', gender: 'male', generation: 5, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Cha của Nguyễn Đều và Nguyễn Đặng.' },
+      { id: 'g5_ha_cau_con', parentId: 'g4_ha_cau', name: 'Nguyễn (Đời 5 - nhánh Cậu)', courtesyName: '', gender: 'male', generation: 5, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Cha của Nguyễn Bính và Nguyễn Tính.' },
+      { id: 'g5_ha_can', parentId: 'g4_ha_cau', name: 'Nguyễn Căn', courtesyName: '', gender: 'male', generation: 5, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '' },
+      { id: 'g5_ha_bang', parentId: 'g4_ha_rang', name: 'Nguyễn Bang', courtesyName: '', gender: 'male', generation: 5, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '' },
+      { id: 'g5_ha_mec', parentId: 'g4_ha_rang', name: 'Nguyễn Méc', courtesyName: '', gender: 'male', generation: 5, birthOrder: '0 con', status: 'no_issue', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Ghi chú trên sơ đồ: 0 con.' },
+      { id: 'g5_ha_quynh', parentId: 'g4_ha_ku', name: 'Nguyễn Quýnh', courtesyName: '', gender: 'male', generation: 5, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '' },
+      { id: 'g5_ha_mien_ku', parentId: 'g4_ha_ku', name: 'Nguyễn Miền', courtesyName: '', gender: 'male', generation: 5, birthOrder: '0 con', status: 'no_issue', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Ghi chú trên sơ đồ: 0 con.' },
+      { id: 'g5_ha_uen', parentId: 'g4_phai_1', name: 'Nguyễn Uền', courtesyName: '', gender: 'male', generation: 5, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '' },
+      { id: 'g6_ha_deu', parentId: 'g5_ha_mien_con', name: 'Nguyễn Đều', courtesyName: '', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '' },
+      { id: 'g6_ha_dang_1', parentId: 'g5_ha_mien_con', name: 'Nguyễn Đặng', courtesyName: 'Biên tập nội dung', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Phụ trách biên tập nội dung phả hệ.' },
+      { id: 'g6_ha_binh', parentId: 'g5_ha_cau_con', name: 'Nguyễn Bính', courtesyName: '', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '' },
+      { id: 'g6_ha_tinh', parentId: 'g5_ha_cau_con', name: 'Nguyễn Tính', courtesyName: '', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '' }
+    ];
 
-      // ĐỜI 2: TIỀN TỔ
-      { id: 'g2_ha_quy_ngoc', parentId: 'g1_thuy_to', name: 'Nguyễn Quý Ngọc', courtesyName: 'Tiền Tổ', gender: 'male', generation: 2, birthOrder: 'Đời 2 - Tiền Tổ', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: 'Thôn Tân Lập', bio: 'Tiền Tổ họ Nguyễn, sinh ra các nhánh phát triển về sau.', avatar: '' },
+    const STORAGE_KEY = 'giapha_nguyen_tanlap_v1';
+    const PHOTO_STORAGE_KEY = 'giapha_nguyen_tanlap_photos_v1';
+    const SB_CONFIG_KEY = 'giapha_nguyen_tanlap_sb_v1';
+    const DOC_ID = 'nguyen_tan_lap_main';
 
-      // ĐỜI 3
-      { id: 'g3_ha_lanh', parentId: 'g2_ha_quy_ngoc', name: 'Nguyễn Lạnh', courtesyName: '', gender: 'male', generation: 3, birthOrder: 'Nhánh trái', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Con Tiền Tổ Nguyễn Quý Ngọc, thuộc nhánh bên trái.', avatar: '' },
-      { id: 'g3_ha_van_ra', parentId: 'g2_ha_quy_ngoc', name: 'Nguyễn Văn Rạ', courtesyName: '', gender: 'male', generation: 3, birthOrder: 'Nhánh giữa', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Con Tiền Tổ Nguyễn Quý Ngọc, thuộc nhánh giữa.', avatar: '' },
-      { id: 'g3_nhanh_phai', parentId: 'g2_ha_quy_ngoc', name: '(Khuyết tên)', courtesyName: 'Nhánh phải', gender: 'male', generation: 3, birthOrder: 'Nhánh phải', status: 'missing', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Ô nhánh bên phải trên sơ đồ gốc chưa ghi tên.', avatar: '' },
+    let members = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null') || structuredClone(INITIAL_MEMBERS);
+    let photos = JSON.parse(localStorage.getItem(PHOTO_STORAGE_KEY) || '[]');
+    let sbConfig = JSON.parse(localStorage.getItem(SB_CONFIG_KEY) || '{"url":"","key":""}');
+    let sbClient = null;
 
-      // ĐỜI 4
-      { id: 'g4_ha_mien', parentId: 'g3_ha_lanh', name: 'Nguyễn Miền', courtesyName: '', gender: 'male', generation: 4, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g4_ha_cau', parentId: 'g3_ha_lanh', name: 'Nguyễn Cậu', courtesyName: '', gender: 'male', generation: 4, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g4_ha_rang', parentId: 'g3_ha_van_ra', name: 'Nguyễn Rạng', courtesyName: '', gender: 'male', generation: 4, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g4_ha_ku', parentId: 'g3_ha_van_ra', name: 'Nguyễn Ku', courtesyName: '', gender: 'male', generation: 4, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g4_phai_1', parentId: 'g3_nhanh_phai', name: '(Khuyết tên)', courtesyName: '', gender: 'male', generation: 4, birthOrder: '', status: 'missing', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+    let undoStack = [];
+    let collapsedIds = new Set();
+    let selectedMemberId = 'g1_thuy_to';
+    let focusedBranchRootId = '';
+    let genFilterValue = 'ALL';
+    let searchQuery = '';
+    let currentView = 'tree';
+    let scale = 0.92;
+    let panX = 40;
+    let panY = 30;
+    let isDragging = false;
+    let dragStartX = 0, dragStartY = 0;
 
-      // ĐỜI 5
-      { id: 'g5_ha_mien_con', parentId: 'g4_ha_mien', name: 'Nguyễn', courtesyName: '', gender: 'male', generation: 5, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Trên sơ đồ gốc ghi họ Nguyễn, là cha của Nguyễn Đều và Nguyễn Đặng.', avatar: '' },
-      { id: 'g5_ha_cau_con', parentId: 'g4_ha_cau', name: 'Nguyễn', courtesyName: '', gender: 'male', generation: 5, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Trên sơ đồ gốc ghi họ Nguyễn, là cha của Nguyễn Bính và Nguyễn Tính.', avatar: '' },
-      { id: 'g5_ha_can', parentId: 'g4_ha_cau', name: 'Nguyễn Căn', courtesyName: '', gender: 'male', generation: 5, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g5_ha_bang', parentId: 'g4_ha_rang', name: 'Nguyễn Bang', courtesyName: '', gender: 'male', generation: 5, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g5_ha_mec', parentId: 'g4_ha_rang', name: 'Nguyễn Méc', courtesyName: '', gender: 'male', generation: 5, birthOrder: '0 con', status: 'no_issue', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Ghi chú trên sơ đồ: 0 con.', avatar: '' },
-      { id: 'g5_ha_quynh', parentId: 'g4_ha_ku', name: 'Nguyễn Quýnh', courtesyName: '', gender: 'male', generation: 5, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g5_ha_mien_ku', parentId: 'g4_ha_ku', name: 'Nguyễn Miền', courtesyName: '', gender: 'male', generation: 5, birthOrder: '0 con', status: 'no_issue', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Ghi chú trên sơ đồ: 0 con.', avatar: '' },
-      { id: 'g5_ha_uen', parentId: 'g4_phai_1', name: 'Nguyễn Uền', courtesyName: '', gender: 'male', generation: 5, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
+    function initSupabase() {
+      if (sbConfig.url && sbConfig.key && window.supabase) {
+        sbClient = window.supabase.createClient(sbConfig.url, sbConfig.key);
+        setCloudBadge('online', 'Đã nối Supabase');
+      } else {
+        sbClient = null;
+        setCloudBadge('local', 'Chế độ cục bộ');
+      }
+    }
 
-      // ĐỜI 6
-      { id: 'g6_ha_deu', parentId: 'g5_ha_mien_con', name: 'Nguyễn Đều', courtesyName: '', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g6_ha_dang_1', parentId: 'g5_ha_mien_con', name: 'Nguyễn Đặng', courtesyName: 'Biên tập nội dung', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: 'Nhánh trái (Đời 3: Nguyễn Lạnh → Đời 4: Nguyễn Miền → Đời 5: ông Nguyễn). Phụ trách biên tập nội dung phả hệ.', avatar: '' },
-      { id: 'g6_ha_binh', parentId: 'g5_ha_cau_con', name: 'Nguyễn Bính', courtesyName: '', gender: 'male', generation: 6, birthOrder: '', status: 'deceased', birthYear: '', deathYear: '', lunarDeathDate: '', spouse: '', burialPlace: '', bio: '', avatar: '' },
-      { id: 'g6_ha_tinh', parentId: 'g5_ha_cau_con', name: 'Nguyễn
+    function setCloudBadge(mode, text) {
+      const dot = document.getElementById('cloudDot');
+      const label = document.getElementById('cloudStatusText');
+      if (label) label.textContent = text;
+      if (!dot) return;
+      dot.className = 'w-2 h-2 rounded-full ' + (
+        mode === 'online' ? 'bg-emerald-400' : mode === 'syncing' ? 'bg-sky-400 animate-ping' : 'bg-amber-400'
+      );
+    }
+
+    function openCloudModal() {
+      document.getElementById('sbUrl').value = sbConfig.url || '';
+      document.getElementById('sbKey').value = sbConfig.key || '';
+      showModal('cloudModal');
+    }
+
+    function closeCloudModal() { hideModal('cloudModal'); }
+
+    async function saveCloudConfig(e) {
+      e.preventDefault();
+      sbConfig = {
+        url: document.getElementById('sbUrl').value.trim(),
+        key: document.getElementById('sbKey').value.trim()
+      };
+      localStorage.setItem(SB_CONFIG_KEY, JSON.stringify(sbConfig));
+      initSupabase();
+      closeCloudModal();
+      await pushToCloud();
+    }
+
+    async function pushToCloud() {
+      if (!sbClient) return;
+      setCloudBadge('syncing', 'Đang đồng bộ...');
+      const { error } = await sbClient.from('family_tree_state').upsert({
+        id: DOC_ID,
+        members,
+        photos,
+        updated_at: new Date().toISOString()
+      });
+      if (error) {
+        setCloudBadge('local', 'Lỗi đồng bộ');
+        alert('Không đẩy được lên Supabase: ' + error.message);
+      } else {
+        setCloudBadge('online', 'Đã đồng bộ Cloud');
+      }
+    }
+
+    async function pullFromCloud() {
+      if (!sbClient) {
+        alert('Hãy nhập Supabase URL và Anon Key trước.');
+        return;
+      }
+      setCloudBadge('syncing', 'Đang tải Cloud...');
+      const { data, error } = await sbClient.from('family_tree_state').select('*').eq('id', DOC_ID).single();
+      if (error || !data) {
+        setCloudBadge('online', 'Chưa có dữ liệu Cloud');
+        alert('Chưa tìm thấy bản ghi trên Cloud hoặc lỗi: ' + (error?.message || 'Trống'));
+        return;
+      }
+      if (Array.isArray(data.members) && data.members.length) {
+        undoStack.push(JSON.stringify(members));
+        members = data.members;
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(members));
+        updateUndoButton();
+      }
+      if (Array.isArray(data.photos)) {
+        photos = data.photos;
+        localStorage.setItem(PHOTO_STORAGE_KEY, JSON.stringify(photos));
+      }
+      setCloudBadge('online', 'Đã tải từ Cloud');
+      closeCloudModal();
+      renderAll();
+    }
+
+    async function syncNow() {
+      if (!sbClient) {
+        openCloudModal();
+        return;
+      }
+      await pushToCloud();
+    }
+
+    function saveState(pushUndo = true) {
+      if (pushUndo) {
+        undoStack.push(JSON.stringify(members));
+        if (undoStack.length > 20) undoStack.shift();
+      }
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(members));
+      updateUndoButton();
+      renderAll();
+      if (sbClient) pushToCloud();
+    }
+
+    function updateUndoButton() {
+      const btn = document.getElementById('btnUndo');
+      const cnt = document.getElementById('undoCount');
+      if (cnt) cnt.textContent = undoStack.length;
+      if (btn) btn.disabled = undoStack.length === 0;
+    }
+
+    function undoLastAction() {
+      if (!undoStack.length) return;
+      members = JSON.parse(undoStack.pop());
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(members));
+      updateUndoButton();
+      renderAll();
+      if (sbClient) pushToCloud();
+    }
+
+    function resetToOriginalData() {
+      if (!confirm('Khôi phục toàn bộ dữ liệu gốc của dòng họ?')) return;
+      undoStack.push(JSON.stringify(members));
+      members = structuredClone(INITIAL_MEMBERS);
+      collapsedIds.clear();
+      focusedBranchRootId = '';
+      genFilterValue = 'ALL';
+      searchQuery = '';
+      document.getElementById('searchInput').value = '';
+      document.getElementById('genFilter').value = 'ALL';
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(members));
+      updateUndoButton();
+      renderAll();
+      fitTreeToScreen();
+      if (sbClient) pushToCloud();
+    }
+
+    function getChildren(parentId) {
+      return members.filter(m => m.parentId === parentId);
+    }
+
+    function getAncestors(memberId) {
+      const chain = [];
+      let cur = members.find(m => m.id === memberId);
+      const seen = new Set();
+      while (cur && !seen.has(cur.id)) {
+        seen.add(cur.id);
+        chain.unshift(cur);
+        cur = members.find(m => m.id === cur.parentId);
+      }
+      return chain;
+    }
+
+    function getDescendantIds(rootId) {
+      const ids = new Set([rootId]);
+      const queue = [rootId];
+      while (queue.length) {
+        const pid = queue.shift();
+        for (const c of getChildren(pid)) {
+          if (!ids.has(c.id)) {
+            ids.add(c.id);
+            queue.push(c.id);
+          }
+        }
+      }
+      return ids;
+    }
+
+    function getVisibleMembers() {
+      let list = members;
+      if (focusedBranchRootId) {
+        const allowed = getDescendantIds(focusedBranchRootId);
+        list = list.filter(m => allowed.has(m.id));
+      }
+      if (genFilterValue !== 'ALL') {
+        const g = Number(genFilterValue);
+        list = list.filter(m => Number(m.generation) === g);
+      }
+      if (searchQuery.trim()) {
+        const q = searchQuery.trim().toLowerCase();
+        list = list.filter(m =>
+          (m.name || '').toLowerCase().includes(q) ||
+          (m.courtesyName || '').toLowerCase().includes(q) ||
+          String(m.generation).includes(q)
+        );
+      }
+      return list;
+    }
+
+    function renderTree() {
+      const layer = document.getElementById('treeNodesLayer');
+      const svg = document.getElementById('treeSvg');
+      layer.innerHTML = '';
+      svg.innerHTML = '';
+
+      const visibleSet = new Set(getVisibleMembers().map(m => m.id));
+      const roots = members.filter(m => !m.parentId || !visibleSet.has(m.parentId));
+
+      const cardW = 196;
+      const cardH = 82;
+      const hGap = 28;
+      const vGap = 92;
+
+      const subtreeWidths = new Map();
+      function calcWidth(id) {
+        const kids = collapsedIds.has(id) ? [] : getChildren(id).filter(c => visibleSet.has(c.id));
+        if (!kids.length) {
+          subtreeWidths.set(id, cardW);
+          return cardW;
+        }
+        const total = kids.reduce((sum, k) => sum + calcWidth(k.id), 0) + hGap * (kids.length - 1);
+        const w = Math.max(cardW, total);
+        subtreeWidths.set(id, w);
+        return w;
+      }
+
+      roots.forEach(r => calcWidth(r.id));
+
+      const positions = new Map();
+      let cursorX = 40;
+
+      function layoutNode(id, x, y) {
+        const w = subtreeWidths.get(id) || cardW;
+        const cx = x + w / 2 - cardW / 2;
+        positions.set(id, { x: cx, y });
+
+        const kids = collapsedIds.has(id) ? [] : getChildren(id).filter(c => visibleSet.has(c.id));
+        if (!kids.length) return;
+
+        const kidsTotalW = kids.reduce((s, k) => s + subtreeWidths.get(k.id), 0) + hGap * (kids.length - 1);
+        let childX = x + w / 2 - kidsTotalW / 2;
+        for (const k of kids) {
+          const kw = subtreeWidths.get(k.id);
+          layoutNode(k.id, childX, y + cardH + vGap);
+          childX += kw + hGap;
+        }
+      }
+
+      for (const r of roots) {
+        layoutNode(r.id, cursorX, 56);
+        cursorX += (subtreeWidths.get(r.id) || cardW) + 60;
+      }
+
+      let maxX = 900, maxY = 600;
+      positions.forEach(p => {
+        maxX = Math.max(maxX, p.x + cardW + 120);
+        maxY = Math.max(maxY, p.y + cardH + 140);
+      });
+
+      const world = document.getElementById('treeWorld');
+      world.style.width = maxX + 'px';
+      world.style.height = maxY + 'px';
+      svg.setAttribute('width', maxX);
+      svg.setAttribute('height', maxY);
+
+      positions.forEach((p, id) => {
+        const m = members.find(x => x.id === id);
+        if (!m || !m.parentId || !positions.has(m.parentId)) return;
+        const pp = positions.get(m.parentId);
+        const x1 = pp.x + cardW / 2;
+        const y1 = pp.y + cardH;
+        const x2 = p.x + cardW / 2;
+        const y2 = p.y;
+        const midY = (y1 + y2) / 2;
+
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('d', `M ${x1} ${y1} L ${x1} ${midY} L ${x2} ${midY} L ${x2} ${y2}`);
+        path.setAttribute('fill', 'none');
+        path.setAttribute('stroke', '#9e731c');
+        path.setAttribute('stroke-width', '2');
+        svg.appendChild(path);
+      });
+
+      positions.forEach((p, id) => {
+        const m = members.find(x => x.id === id);
+        if (!m) return;
+        const kidsCount = getChildren(m.id).length;
+        const isSelected = m.id === selectedMemberId;
+
+        let cardStyle = 'card-early-branch';
+        if (m.generation === 1) cardStyle = 'card-founder';
+        else if (m.generation === 2) cardStyle = 'card-forefather';
+        else if (m.status === 'missing' || m.status === 'no_issue') cardStyle = 'bg-stone-100 border-dashed border-stone-400 text-stone-700';
+        else if (m.gender === 'female') cardStyle = 'bg-rose-50 border-rose-300 text-[#241610]';
+
+        const card = document.createElement('div');
+        card.id = 'node_' + m.id;
+        card.style.left = p.x + 'px';
+        card.style.top = p.y + 'px';
+        card.style.width = cardW + 'px';
+        card.style.minHeight = cardH + 'px';
+        card.className = `node-card absolute rounded-xl border-2 px-3 py-2 cursor-pointer flex flex-col justify-between ${cardStyle} ${isSelected ? 'ring-4 ring-[#c69728] highlight-pulse' : ''}`;
+
+        card.addEventListener('click', (e) => {
+          e.stopPropagation();
+          selectMember(m.id);
+        });
+
+        card.innerHTML = `
+          <div class="flex items-start justify-between gap-1">
+            <span class="text-[10px] font-bold uppercase px-1.5 py-0.5 rounded ${m.generation <= 2 ? 'bg-[#c69728]/25 text-[#f7e5a6]' : 'bg-[#7a1414]/10 text-[#520909]'}">
+              Đời ${m.generation}
+            </span>
+            <div class="quick-actions flex items-center gap-1" onclick="event.stopPropagation()">
+              <button onclick="openAddModal('${m.id}')" title="Thêm con" class="px-1.5 py-0.5 rounded bg-[#c69728] text-[#241610] font-bold text-[10px]">+Con</button>
+              <button onclick="openEditModal('${m.id}')" title="Sửa" class="px-1.5 py-0.5 rounded bg-white/90 text-[#241610] font-bold text-[10px]">Sửa</button>
+            </div>
+          </div>
+          <div class="font-serif-trad font-bold text-[13px] leading-snug mt-1 truncate">${escapeHtml(m.name)}</div>
+          <div class="text-[10.5px] opacity-85 truncate">${escapeHtml(m.courtesyName || m.birthOrder || (kidsCount ? kidsCount + ' con' : 'Chưa cập nhật'))}</div>
+          ${kidsCount > 0 ? `<button type="button" onclick="event.stopPropagation(); toggleCollapse('${m.id}')" class="mt-1 self-end text-[10px] font-bold px-1.5 py-0.2 rounded bg-black/10">${collapsedIds.has(m.id) ? '▸ Mở (' + kidsCount + ')' : '▾ Thu (' + kidsCount + ')'}</button>` : ''}
+        `;
+
+        layer.appendChild(card);
+      });
+
+      applyTransform();
+      updateStatsAndBranchSelect();
+    }
+
+    function selectMember(id) {
+      selectedMemberId = id;
+      renderTree();
+      openDetailDrawer(id);
+      renderBreadcrumb(id);
+    }
+
+    function openDetailDrawer(id) {
+      const m = members.find(x => x.id === id);
+      const drawer = document.getElementById('detailDrawer');
+      const content = document.getElementById('detailContent');
+      if (!m || !drawer || !content) return;
+
+      const parent = members.find(p => p.id === m.parentId);
+      const children = getChildren(m.id);
+      const ancestors = getAncestors(m.id);
+
+      content.innerHTML = `
+        <div class="bg-[#fffaf0] rounded-xl p-3.5 border border-[#c69728]/80 space-y-2">
+          <div class="flex items-center justify-between gap-2">
+            <span class="px-2 py-0.5 rounded-full bg-[#7a1414] text-[#fff8e6] font-bold text-[10.5px]">Đời thứ ${m.generation}</span>
+            <div class="flex gap-1.5">
+              <button onclick="openEditModal('${m.id}')" class="px-2.5 py-1 rounded-lg bg-[#c69728] text-[#241610] font-bold">Sửa hồ sơ</button>
+              <button onclick="openAddModal('${m.id}')" class="px-2.5 py-1 rounded-lg bg-[#7a1414] text-white font-semibold">+ Thêm con</button>
+            </div>
+          </div>
+          <h3 class="font-serif-trad font-extrabold text-lg text-[#520909]">${escapeHtml(m.name)}</h3>
+          ${m.courtesyName ? `<p class="text-[#695547]">Tên húy / Hiệu: <strong>${escapeHtml(m.courtesyName)}</strong></p>` : ''}
+          <p class="text-[#695547]">Cha / Nhánh trên: <strong>${parent ? escapeHtml(parent.name) : 'Thủy Tổ gốc'}</strong></p>
+          ${m.birthOrder ? `<p class="text-[#695547]">Ghi chú / Thứ tự: <strong>${escapeHtml(m.birthOrder)}</strong></p>` : ''}
+          ${m.lunarDeathDate ? `<p class="text-[#695547]">Ngày giỗ Âm lịch: <strong>${escapeHtml(m.lunarDeathDate)}</strong></p>` : ''}
+          ${m.burialPlace ? `<p class="text-[#695547]">Nơi an táng / Mộ phần: <strong>${escapeHtml(m.burialPlace)}</strong></p>` : ''}
+          ${m.spouse ? `<p class="text-[#695547]">Vợ / Chồng: <strong>${escapeHtml(m.spouse)}</strong></p>` : ''}
+          ${m.bio ? `<div class="pt-2 border-t border-[#e4d4b5] text-[#241610] leading-relaxed">${escapeHtml(m.bio)}</div>` : ''}
+        </div>
+
+        <div class="bg-[#fffaf0] rounded-xl p-3.5 border border-[#c69728]/60 space-y-2">
+          <div class="font-bold text-[#520909]">🌿 Chuỗi tổ tiên (${ancestors.length} đời)</div>
+          <div class="flex flex-wrap gap-1.5">
+            ${ancestors.map(a => `<button onclick="selectMember('${a.id}')" class="px-2 py-1 rounded bg-[#efe2c6] hover:bg-[#e0cca3] text-[#241610] font-medium">Đ${a.generation}: ${escapeHtml(a.name)}</button>`).join('')}
+          </div>
+        </div>
+
+        <div class="bg-[#fffaf0] rounded-xl p-3.5 border border-[#c69728]/60 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-[#520909]">👨‍👩‍👧‍👦 Con trực hệ (${children.length})</span>
+            ${children.length > 0 ? `<button onclick="setFocusedBranch('${m.id}')" class="text-[11px] font-bold text-[#7a1414] underline">Xem riêng nhánh này</button>` : ''}
+          </div>
+          ${children.length === 0
+            ? `<p class="text-[#695547] italic">Chưa có dữ liệu con trên sơ đồ.</p>`
+            : `<div class="space-y-1.5">${children.map(c => `<button onclick="selectMember('${c.id}')" class="w-full text-left px-3 py-2 rounded-lg bg-[#f7efe0] hover:bg-[#ede0c5] border border-[#d8c49e] flex items-center justify-between"><span><strong>${escapeHtml(c.name)}</strong></span><span class="text-[11px] text-[#695547]">Đời ${c.generation} ›</span></button>`).join('')}</div>`
+          }
+        </div>
+
+        ${m.id !== 'g1_thuy_to' ? `<button onclick="deleteMember('${m.id}')" class="w-full py-2 rounded-lg border border-red-300 text-red-700 hover:bg-red-50 font-semibold">Xóa thành viên này</button>` : ''}
+      `;
+
+      drawer.classList.remove('hidden');
+      drawer.classList.add('flex');
+    }
+
+    function closeDetailDrawer() {
+      const drawer = document.getElementById('detailDrawer');
+      drawer.classList.add('hidden');
+      drawer.classList.remove('flex');
+    }
+
+    function renderBreadcrumb(id) {
+      const trail = document.getElementById('breadcrumbTrail');
+      const actions = document.getElementById('breadcrumbActions');
+      const ancestors = getAncestors(id);
+      if (!ancestors.length) return;
+
+      trail.innerHTML = `<span class="font-bold text-[#520909]">📍 Đường dẫn nhánh:</span> ` +
+        ancestors.map((a, idx) =>
+          `<button onclick="selectMember('${a.id}')" class="px-2 py-0.5 rounded bg-[#fffaf0] hover:bg-[#e5d4b1] border border-[#bfa36e] font-semibold">Đ${a.generation}: ${escapeHtml(a.name)}</button>` +
+          (idx < ancestors.length - 1 ? `<span class="text-[#7a1414] font-bold">›</span>` : '')
+        ).join('');
+
+      actions.innerHTML = `<button onclick="setFocusedBranch('${id}')" class="px-2 py-0.5 rounded bg-[#7a1414] text-white font-semibold">Lọc nhánh từ người này</button>`;
+    }
+
+    function openAddModal(defaultParentId = 'g1_thuy_to') {
+      document.getElementById('memberModalTitle').textContent = 'Thêm Thành Viên Mới';
+      document.getElementById('editMemberId').value = '';
+      document.getElementById('memberForm').reset();
+      populateParentSelect('mParentId', defaultParentId);
+      autoCalcGeneration();
+      showModal('memberModal');
+    }
+
+    function openEditModal(id) {
+      const m = members.find(x => x.id === id);
+      if (!m) return;
+      document.getElementById('memberModalTitle').textContent = 'Chỉnh Sửa Hồ Sơ Thành Viên';
+      document.getElementById('editMemberId').value = m.id;
+      document.getElementById('mName').value = m.name || '';
+      document.getElementById('mCourtesy').value = m.courtesyName || '';
+      populateParentSelect('mParentId', m.parentId || '', m.id);
+      document.getElementById('mGeneration').value = m.generation || 1;
+      document.getElementById('mBirthOrder').value = m.birthOrder || '';
+      document.getElementById('mGender').value = m.gender || 'male';
+      document.getElementById('mStatus').value = m.status || 'deceased';
+      document.getElementById('mBirthYear').value = m.birthYear || '';
+      document.getElementById('mDeathYear').value = m.deathYear || '';
+      document.getElementById('mLunarDeath').value = m.lunarDeathDate || '';
+      document.getElementById('mSpouse').value = m.spouse || '';
+      document.getElementById('mBurial').value = m.burialPlace || '';
+      document.getElementById('mBio').value = m.bio || '';
+      showModal('memberModal');
+    }
+
+    function populateParentSelect(selectId, selectedVal = '', excludeId = '') {
+      const sel = document.getElementById(selectId);
+      sel.innerHTML = `<option value="">-- Không có cha (Đời 1 / Gốc) --</option>` +
+        members
+          .filter(m => m.id !== excludeId)
+          .map(m => `<option value="${m.id}" ${m.id === selectedVal ? 'selected' : ''}>Đời ${m.generation} - ${escapeHtml(m.name)}</option>`)
+          .join('');
+    }
+
+    function autoCalcGeneration() {
+      const pid = document.getElementById('mParentId').value;
+      if (!pid) {
+        document.getElementById('mGeneration').value = 1;
+        return;
+      }
+      const p = members.find(m => m.id === pid);
+      if (p) document.getElementById('mGeneration').value = Number(p.generation) + 1;
+    }
+
+    function submitMemberForm(e) {
+      e.preventDefault();
+      const editId = document.getElementById('editMemberId').value;
+      const pid = document.getElementById('mParentId').value || null;
+      const data = {
+        parentId: pid,
+        name: document.getElementById('mName').value.trim(),
+        courtesyName: document.getElementById('mCourtesy').value.trim(),
+        generation: Number(document.getElementById('mGeneration').value) || 1,
+        birthOrder: document.getElementById('mBirthOrder').value.trim(),
+        gender: document.getElementById('mGender').value,
+        status: document.getElementById('mStatus').value,
+        birthYear: document.getElementById('mBirthYear').value.trim(),
+        deathYear: document.getElementById('mDeathYear').value.trim(),
+        lunarDeathDate: document.getElementById('mLunarDeath').value.trim(),
+        spouse: document.getElementById('mSpouse').value.trim(),
+        burialPlace: document.getElementById('mBurial').value.trim(),
+        bio: document.getElementById('mBio').value.trim()
+      };
+
+      if (editId) {
+        const idx = members.findIndex(m => m.id === editId);
+        if (idx !== -1) members[idx] = { ...members[idx], ...data };
+        selectedMemberId = editId;
+      } else {
+        const newId = 'm_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6);
+        members.push({ id: newId, ...data });
+        if (pid) collapsedIds.delete(pid);
+        selectedMemberId = newId;
+      }
+
+      closeMemberModal();
+      saveState(true);
+      openDetailDrawer(selectedMemberId);
+    }
+
+    function deleteMember(id) {
+      if (!confirm('Xóa thành viên này và các nhánh con trực thuộc?')) return;
+      const toDelete = getDescendantIds(id);
+      members = members.filter(m => !toDelete.has(m.id));
+      if (toDelete.has(selectedMemberId)) {
+        selectedMemberId = 'g1_thuy_to';
+        closeDetailDrawer();
+      }
+      saveState(true);
+    }
+
+    function openBatchModal() {
+      populateParentSelect('batchParentId', selectedMemberId || 'g1_thuy_to');
+      document.getElementById('batchNames').value = '';
+      showModal('batchModal');
+    }
+
+    function submitBatchForm(e) {
+      e.preventDefault();
+      const pid = document.getElementById('batchParentId').value || null;
+      const parent = members.find(m => m.id === pid);
+      const gen = parent ? Number(parent.generation) + 1 : 1;
+      const raw = document.getElementById('batchNames').value;
+      const names = raw.split(/[\n,]+/).map(s => s.trim()).filter(Boolean);
+      if (!names.length) return;
+
+      names.forEach((name, i) => {
+        members.push({
+          id: 'm_' + Date.now() + '_' + i,
+          parentId: pid,
+          name,
+          courtesyName: '',
+          gender: 'male',
+          generation: gen,
+          birthOrder: '',
+          status: 'alive',
+          birthYear: '',
+          deathYear: '',
+          lunarDeathDate: '',
+          spouse: '',
+          burialPlace: '',
+          bio: ''
+        });
+      });
+
+      if (pid) collapsedIds.delete(pid);
+      closeBatchModal();
+      saveState(true);
+    }
+
+    function switchView(view) {
+      currentView = view;
+      const views = {
+        tree: 'treeViewport',
+        table: 'tableViewport',
+        archive: 'archiveViewport',
+        memorial: 'memorialViewport'
+      };
+      Object.entries(views).forEach(([k, elId]) => {
+        document.getElementById(elId).classList.toggle('hidden', k !== view);
+      });
+
+      const btns = {
+        tree: 'btnViewTree',
+        table: 'btnViewTable',
+        archive: 'btnViewArchive',
+        memorial: 'btnViewMemorial'
+      };
+      Object.entries(btns).forEach(([k, bId]) => {
+        const b = document.getElementById(bId);
+        if (k === view) {
+          b.className = 'px-2.5 py-1.5 rounded-md font-semibold bg-[#c69728] text-[#241610] transition';
+        } else {
+          b.className = 'px-2.5 py-1.5 rounded-md font-medium text-[#f9ebd2] hover:text-white transition';
+        }
+      });
+
+      renderAll();
+    }
+
+    function renderTable() {
+      const tbody = document.getElementById('tableBody');
+      const list = getVisibleMembers().sort((a, b) => a.generation - b.generation);
+      tbody.innerHTML = list.map(m => {
+        const parent = members.find(p => p.id === m.parentId);
+        return `
+          <tr class="hover:bg-[#f2e5cb]/60 cursor-pointer" onclick="selectMember('${m.id}'); switchView('tree');">
+            <td class="py-2.5 px-3 font-bold text-[#7a1414]">Đời ${m.generation}</td>
+            <td class="py-2.5 px-3 font-semibold text-[#241610]">${escapeHtml(m.name)}</td>
+            <td class="py-2.5 px-3 text-[#695547]">${escapeHtml(m.courtesyName || m.birthOrder || '—')}</td>
+            <td class="py-2.5 px-3 text-[#695547]">${parent ? escapeHtml(parent.name) : 'Thủy Tổ'}</td>
+            <td class="py-2.5 px-3">${escapeHtml(m.lunarDeathDate || '—')}</td>
+            <td class="py-2.5 px-3 text-right space-x-1" onclick="event.stopPropagation()">
+              <button onclick="openEditModal('${m.id}')" class="px-2 py-1 rounded bg-[#efe2c6] hover:bg-[#e0cca3] font-semibold">Sửa</button>
+              <button onclick="openAddModal('${m.id}')" class="px-2 py-1 rounded bg-[#7a1414] text-white font-semibold">+Con</button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function renderArchive() {
+      const grid = document.getElementById('archiveGrid');
+      if (!photos.length) {
+        grid.innerHTML = `<div class="col-span-full bg-[#fffaf0] border border-dashed border-[#c69728] rounded-2xl p-8 text-center text-xs text-[#695547]">Chưa có hình ảnh tư liệu nào. Bấm <strong>+ Thêm hình ảnh tư liệu</strong> để lưu ảnh lăng mộ, nhà thờ họ hoặc lễ giỗ.</div>`;
+        return;
+      }
+      grid.innerHTML = photos.map(p => `
+        <div class="bg-[#fffaf0] rounded-2xl border border-[#c69728] overflow-hidden shadow-sm">
+          <img src="${escapeHtml(p.url)}" alt="${escapeHtml(p.title)}" class="w-full h-48 object-cover bg-stone-200" />
+          <div class="p-3.5 space-y-1 text-xs">
+            <div class="font-serif-trad font-bold text-sm text-[#520909]">${escapeHtml(p.title)}</div>
+            <p class="text-[#695547]">${escapeHtml(p.caption || '')}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function openPhotoModal() {
+      document.getElementById('pTitle').value = '';
+      document.getElementById('pImageUrl').value = '';
+      document.getElementById('pCaption').value = '';
+      showModal('photoModal');
+    }
+
+    function handlePhotoFile(e) {
+      const file = e.target.files?.[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        document.getElementById('pImageUrl').value = reader.result;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function submitPhotoForm(e) {
+      e.preventDefault();
+      photos.unshift({
+        id: 'ph_' + Date.now(),
+        title: document.getElementById('pTitle').value.trim(),
+        url: document.getElementById('pImageUrl').value.trim(),
+        caption: document.getElementById('pCaption').value.trim()
+      });
+      localStorage.setItem(PHOTO_STORAGE_KEY, JSON.stringify(photos));
+      closePhotoModal();
+      renderArchive();
+      if (sbClient) pushToCloud();
+    }
+
+    function renderMemorialAndStats() {
+      const kpis = document.getElementById('kpiSummaryCards');
+      const statsBody = document.getElementById('generationStatsBody');
+      const memList = document.getElementById('memorialListContainer');
+
+      const total = members.length;
+      const maxGen = Math.max(8, ...members.map(m => Number(m.generation) || 1));
+      const withLunar = members.filter(m => (m.lunarDeathDate || '').trim()).length;
+      const missingCount = members.filter(m => m.status === 'missing' || m.status === 'no_issue').length;
+
+      kpis.innerHTML = `
+        <div class="bg-[#fffaf0] p-3.5 rounded-xl border border-[#c69728]"><div class="text-[11px] text-[#695547]">Tổng nhân đinh</div><div class="font-serif-trad text-xl font-extrabold text-[#520909]">${total}</div></div>
+        <div class="bg-[#fffaf0] p-3.5 rounded-xl border border-[#c69728]"><div class="text-[11px] text-[#695547]">Số đời ghi nhận</div><div class="font-serif-trad text-xl font-extrabold text-[#520909]">${maxGen} đời</div></div>
+        <div class="bg-[#fffaf0] p-3.5 rounded-xl border border-[#c69728]"><div class="text-[11px] text-[#695547]">Có ngày giỗ ÂL</div><div class="font-serif-trad text-xl font-extrabold text-[#520909]">${withLunar}</div></div>
+        <div class="bg-[#fffaf0] p-3.5 rounded-xl border border-[#c69728]"><div class="text-[11px] text-[#695547]">Khuyết tên / 0 con</div><div class="font-serif-trad text-xl font-extrabold text-[#520909]">${missingCount}</div></div>
+      `;
+
+      let rows = '';
+      for (let g = 1; g <= maxGen; g++) {
+        const gm = members.filter(m => Number(m.generation) === g);
+        const gLunar = gm.filter(m => (m.lunarDeathDate || '').trim()).length;
+        const gSpecial = gm.filter(m => m.status === 'missing' || m.status === 'no_issue').length;
+        rows += `
+          <tr>
+            <td class="py-2.5 px-3 font-bold text-[#7a1414]">Đời ${g}</td>
+            <td class="py-2.5 px-3 font-semibold">${gm.length}</td>
+            <td class="py-2.5 px-3">${gLunar}</td>
+            <td class="py-2.5 px-3">${gSpecial}</td>
+            <td class="py-2.5 px-3 text-right"><button onclick="document.getElementById('genFilter').value='${g}'; applyGenFilter('${g}'); switchView('tree');" class="px-2 py-1 rounded bg-[#efe2c6] hover:bg-[#e0cca3] font-semibold">Xem trên cây</button></td>
+          </tr>
+        `;
+      }
+      statsBody.innerHTML = rows;
+
+      const lunarMembers = members.filter(m => (m.lunarDeathDate || '').trim());
+      memList.innerHTML = lunarMembers.length
+        ? lunarMembers.map(m => `
+            <div onclick="selectMember('${m.id}'); switchView('tree');" class="cursor-pointer bg-[#fffaf0] p-3.5 rounded-xl border border-[#c69728]/80 hover:bg-[#f5ebd2]">
+              <div class="text-xs font-bold text-[#7a1414]">🕯️ ${escapeHtml(m.lunarDeathDate)} • Đời ${m.generation}</div>
+              <div class="font-serif-trad font-bold text-sm text-[#241610] mt-0.5">${escapeHtml(m.name)}</div>
+              ${m.burialPlace ? `<div class="text-[11px] text-[#695547] mt-1">Mộ phần: ${escapeHtml(m.burialPlace)}</div>` : ''}
+            </div>
+          `).join('')
+        : `<div class="col-span-full bg-[#fffaf0] p-4 rounded-xl border border-[#c69728]/60 text-xs text-[#695547]">Chưa có thành viên nào được nhập ngày giỗ Âm lịch. Bạn có thể bấm vào bất kỳ thành viên nào trên sơ đồ để cập nhật.</div>`;
+    }
+
+    function updateStatsAndBranchSelect() {
+      const badge = document.getElementById('statsBadge');
+      if (badge) badge.textContent = `${getVisibleMembers().length} / ${members.length} thành viên`;
+
+      const sel = document.getElementById('branchFocusSelect');
+      if (sel) {
+        const candidates = members.filter(m => m.generation <= 5 && getChildren(m.id).length > 0);
+        sel.innerHTML = `<option value="">Toàn bộ dòng họ (8 đời)</option>` +
+          candidates.map(c => `<option value="${c.id}" ${c.id === focusedBranchRootId ? 'selected' : ''}>Nhánh Đời ${c.generation}: ${escapeHtml(c.name)}</option>`).join('');
+      }
+
+      const banner = document.getElementById('branchFocusBanner');
+      const clearBtn = document.getElementById('btnClearBranchFocus');
+      if (focusedBranchRootId) {
+        const root = members.find(m => m.id === focusedBranchRootId);
+        document.getElementById('branchFocusLabel').textContent = root ? `Nhánh ${root.name} (Đời ${root.generation})` : 'Nhánh đang chọn';
+        banner?.classList.remove('hidden');
+        clearBtn?.classList.remove('hidden');
+      } else {
+        banner?.classList.add('hidden');
+        clearBtn?.classList.add('hidden');
+      }
+    }
+
+    function setFocusedBranch(id) {
+      focusedBranchRootId = id || '';
+      renderAll();
+      if (focusedBranchRootId) focusNodeById(focusedBranchRootId);
+    }
+
+    function clearBranchFocus() {
+      focusedBranchRootId = '';
+      renderAll();
+      fitTreeToScreen();
+    }
+
+    function applyGenFilter(val) {
+      genFilterValue = val;
+      renderAll();
+    }
+
+    function handleSearch(val) {
+      searchQuery = val;
+      document.getElementById('clearSearchBtn').classList.toggle('hidden', !val.trim());
+      renderAll();
+    }
+
+    function clearSearch() {
+      searchQuery = '';
+      document.getElementById('searchInput').value = '';
+      document.getElementById('clearSearchBtn').classList.add('hidden');
+      renderAll();
+    }
+
+    function toggleCollapse(id) {
+      if (collapsedIds.has(id)) collapsedIds.delete(id);
+      else collapsedIds.add(id);
+      renderTree();
+    }
+
+    function expandAllNodes() {
+      collapsedIds.clear();
+      renderTree();
+    }
+
+    function collapseToGen(maxGen) {
+      collapsedIds.clear();
+      members.forEach(m => {
+        if (Number(m.generation) >= maxGen && getChildren(m.id).length > 0) {
+          collapsedIds.add(m.id);
+        }
+      });
+      renderTree();
+    }
+
+    function zoomBy(delta) {
+      scale = Math.max(0.35, Math.min(2, Number((scale + delta).toFixed(2))));
+      applyTransform();
+    }
+
+    function fitTreeToScreen() {
+      scale = 0.92;
+      panX = 36;
+      panY = 24;
+      applyTransform();
+    }
+
+    function focusNodeById(id) {
+      const el = document.getElementById('node_' + id);
+      const vp = document.getElementById('treeViewport');
+      if (!el || !vp) return;
+      const left = parseFloat(el.style.left) || 0;
+      const top = parseFloat(el.style.top) || 0;
+      panX = Math.max(20, vp.clientWidth / 2 - left * scale - 98);
+      panY = Math.max(20, vp.clientHeight / 3 - top * scale);
+      applyTransform();
+    }
+
+    function applyTransform() {
+      const world = document.getElementById('treeWorld');
+      if (world) world.style.transform = `translate(${panX}px, ${panY}px) scale(${scale})`;
+      const lbl = document.getElementById('zoomLabel');
+      if (lbl) lbl.textContent = Math.round(scale * 100) + '%';
+    }
+
+    function togglePoemPanel() {
+      const body = document.getElementById('poemScrollBody');
+      const btn = document.getElementById('btnTogglePoem');
+      const isHidden = body.classList.toggle('hidden');
+      btn.textContent = isHidden ? 'Mở thơ' : 'Thu gọn';
+    }
+
+    function setDeviceMode(mode) {
+      const isMobile = mode === 'mobile';
+      document.body.classList.toggle('force-mobile-mode', isMobile);
+      document.getElementById('btnDeviceDesktop').className = isMobile
+        ? 'px-2 py-1.5 rounded-md font-medium text-[#f9ebd2] hover:text-white transition'
+        : 'px-2 py-1.5 rounded-md font-semibold bg-[#c69728] text-[#241610] transition';
+      document.getElementById('btnDeviceMobile').className = isMobile
+        ? 'px-2 py-1.5 rounded-md font-semibold bg-[#c69728] text-[#241610] transition'
+        : 'px-2 py-1.5 rounded-md font-medium text-[#f9ebd2] hover:text-white transition';
+    }
+
+    function exportCSV() {
+      const header = ['ID', 'ParentID', 'Doi', 'HoTen', 'TenHuy', 'NgayGioAL', 'NoiAnTang', 'GhiChu'];
+      const rows = members.map(m => [m.id, m.parentId || '', m.generation, m.name, m.courtesyName || '', m.lunarDeathDate || '', m.burialPlace || '', m.bio || '']);
+      const csv = '\uFEFF' + [header, ...rows].map(r => r.map(v => `"${String(v).replaceAll('"', '""')}"`).join(',')).join('\n');
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'gia_pha_ho_nguyen_tan_lap.csv';
+      a.click();
+    }
+
+    function openPrintModal() { showModal('printOptionsModal'); }
+    function closePrintModal() { hideModal('printOptionsModal'); }
+    function printFullList() {
+      const sheet = document.getElementById('printSheetView');
+      sheet.innerHTML = `
+        <h1 style="font-size:20pt;font-weight:bold;margin-bottom:8px;">SƠ ĐỒ KÝ PHẢ HỌ NGUYỄN - THÔN TÂN LẬP</h1>
+        <p style="margin-bottom:16px;">Danh sách thành viên theo đời (Tổng: ${members.length} người)</p>
+        <table border="1" cellpadding="6" cellspacing="0" style="width:100%;border-collapse:collapse;font-size:12pt;">
+          <thead><tr><th>Đời</th><th>Họ và tên</th><th>Tên húy / Ghi chú</th><th>Ngày giỗ ÂL</th><th>Mộ phần</th></tr></thead>
+          <tbody>
+            ${members.slice().sort((a,b)=>a.generation-b.generation).map(m=>`<tr><td>Đời ${m.generation}</td><td>${escapeHtml(m.name)}</td><td>${escapeHtml(m.courtesyName||m.birthOrder||'')}</td><td>${escapeHtml(m.lunarDeathDate||'')}</td><td>${escapeHtml(m.burialPlace||'')}</td></tr>`).join('')}
+          </tbody>
+        </table>
+      `;
+      closePrintModal();
+      window.print();
+    }
+
+    function showModal(id) {
+      const el = document.getElementById(id);
+      el.classList.remove('hidden');
+      el.classList.add('flex');
+    }
+    function hideModal(id) {
+      const el = document.getElementById(id);
+      el.classList.add('hidden');
+      el.classList.remove('flex');
+    }
+    function closeMemberModal() { hideModal('memberModal'); }
+    function closeBatchModal() { hideModal('batchModal'); }
+    function closePhotoModal() { hideModal('photoModal'); }
+
+    function escapeHtml(str) {
+      return String(str || '').replace(/[&<>"']/g, s => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[s]));
+    }
+
+    function renderAll() {
+      renderTree();
+      renderTable();
+      renderArchive();
+      renderMemorialAndStats();
+    }
+
+    const vp = document.getElementById('treeViewport');
+    vp.addEventListener('pointerdown', (e) => {
+      if (e.target.closest('.node-card') || e.target.closest('button')) return;
+      isDragging = true;
+      dragStartX = e.clientX - panX;
+      dragStartY = e.clientY - panY;
+    });
+    window.addEventListener('pointermove', (e) => {
+      if (!isDragging) return;
+      panX = e.clientX - dragStartX;
+      panY = e.clientY - dragStartY;
+      applyTransform();
+    });
+    window.addEventListener('pointerup', () => { isDragging = false; });
+    vp.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      zoomBy(e.deltaY < 0 ? 0.08 : -0.08);
+    }, { passive: false });
+
+    initSupabase();
+    updateUndoButton();
+    renderAll();
+    selectMember(selectedMemberId);
+  </script>
+</body>
+</html>
